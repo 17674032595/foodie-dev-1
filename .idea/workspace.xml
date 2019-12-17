@@ -1,13 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="2.完成foodie-dev-api的springboot初始化">
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/CarouselMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsCommentsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsImgMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsParamMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsSpecMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/OrderItemsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/OrderStatusMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/OrdersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/UserAddressMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/UsersMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/my/mapper/MyMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/CarouselMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsCommentsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsImgMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsParamMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsSpecMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/OrderItemsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/OrderStatusMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/OrdersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/UserAddressMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/UsersMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/Carousel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/Items.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/ItemsComments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/ItemsImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/ItemsParam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/ItemsSpec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/OrderItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/UserAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/Users.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +106,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wuyiccc.my.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-pojo\src\main\java\com\wuyiccc\pojo" />
+      <recent name="E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-mapper\src\main\resources\mapper" />
+      <recent name="E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-mapper\src\main\java\com\wuyiccc\mapper" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
@@ -135,6 +179,15 @@
       <workItem from="1575961893386" duration="1330000" />
       <workItem from="1575975492612" duration="4082000" />
       <workItem from="1576047324089" duration="4095000" />
+      <workItem from="1576061281648" duration="257000" />
+      <workItem from="1576069146251" duration="32000" />
+      <workItem from="1576133229531" duration="594000" />
+      <workItem from="1576220707512" duration="8293000" />
+      <workItem from="1576284940609" duration="158000" />
+      <workItem from="1576392869459" duration="55000" />
+      <workItem from="1576473803759" duration="696000" />
+      <workItem from="1576505421816" duration="368000" />
+      <workItem from="1576545153893" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common">
       <created>1575962871862</created>
@@ -143,70 +196,99 @@
       <option name="project" value="LOCAL" />
       <updated>1575962871862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2.完成foodie-dev-api的springboot初始化">
+      <created>1576061358585</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576061358585</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common" />
+    <MESSAGE value="2.完成foodie-dev-api的springboot初始化" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.完成foodie-dev-api的springboot初始化" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="455" y="133" key="CommitChangelistDialog2" timestamp="1575962871284">
+    <state x="455" y="133" key="CommitChangelistDialog2" timestamp="1576549502634">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="455" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1575962871284" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1575961922046">
+    <state x="455" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1576549502634" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1576546098544">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1575961922046" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1576060897907">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576546098544" />
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom" timestamp="1576549212527">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1576060897907">
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576549212527" />
+    <state width="1877" height="337" key="GridCell.Tab.0.center" timestamp="1576549212527">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1576060897907">
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
+    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576549212527" />
+    <state width="1877" height="337" key="GridCell.Tab.0.left" timestamp="1576549212525">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1576060897907">
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
+    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576549212525" />
+    <state width="1877" height="337" key="GridCell.Tab.0.right" timestamp="1576549212527">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.1.bottom" timestamp="1576060897907">
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
+    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576549212527" />
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1576549201952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.1.center" timestamp="1576060897907">
+    <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576549201952" />
+    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1576549201952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.1.left" timestamp="1576060897907">
+    <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
+    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576549201952" />
+    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1576549201952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
-    <state width="1877" height="295" key="GridCell.Tab.1.right" timestamp="1576060897907">
+    <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
+    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576549201952" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1576549201952">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="295" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576060897907" />
+    <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576549201952" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1576059509929">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576059509929" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1575963051613">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1576061471327">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1575963051613" />
-    <state x="640" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1576061283240">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576061471327" />
+    <state x="640" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1576284940796">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="640" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576061283240" />
+    <state x="640" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576284940796" />
     <state x="334" y="234" key="new project wizard" timestamp="1575962732967">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
