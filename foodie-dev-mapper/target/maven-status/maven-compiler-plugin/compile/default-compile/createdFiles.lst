@@ -1,6 +1,7 @@
 com\wuyiccc\mapper\ItemsParamMapper.class
 com\wuyiccc\my\mapper\MyMapper.class
 com\wuyiccc\mapper\OrderItemsMapper.class
+com\wuyiccc\mapper\StuMapper.class
 com\wuyiccc\mapper\ItemsCommentsMapper.class
 com\wuyiccc\mapper\ItemsMapper.class
 com\wuyiccc\mapper\UsersMapper.class

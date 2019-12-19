@@ -1,12 +1,13 @@
 com\wuyiccc\pojo\OrderItems.class
 com\wuyiccc\pojo\Orders.class
-com\wuyiccc\pojo\Carousel.class
-com\wuyiccc\pojo\Items.class
 com\wuyiccc\pojo\ItemsComments.class
-com\wuyiccc\pojo\ItemsParam.class
-com\wuyiccc\pojo\ItemsSpec.class
 com\wuyiccc\pojo\Users.class
 com\wuyiccc\pojo\OrderStatus.class
 com\wuyiccc\pojo\Category.class
 com\wuyiccc\pojo\ItemsImg.class
 com\wuyiccc\pojo\UserAddress.class
+com\wuyiccc\pojo\Carousel.class
+com\wuyiccc\pojo\Items.class
+com\wuyiccc\pojo\ItemsParam.class
+com\wuyiccc\pojo\ItemsSpec.class
+com\wuyiccc\pojo\Stu.class

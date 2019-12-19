@@ -1,7 +1,9 @@
 package com.wuyiccc;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * @author wuyiccc
@@ -10,6 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+//扫描mybatis通用mapper所在的包
+@MapperScan(basePackages = "com.wuyiccc.mapper")
 public class Application {
 
     public static void main(String[] args) {

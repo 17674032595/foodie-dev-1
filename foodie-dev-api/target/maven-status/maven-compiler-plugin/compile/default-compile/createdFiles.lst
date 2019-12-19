@@ -1,2 +1,3 @@
 com\wuyiccc\Application.class
+com\wuyiccc\controller\StuFooController.class
 com\wuyiccc\controller\HelloController.class
