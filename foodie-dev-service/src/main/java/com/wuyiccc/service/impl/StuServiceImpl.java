@@ -28,18 +28,35 @@ public class StuServiceImpl implements StuService {
 
     }
 
+
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public void saveStud() {
 
+        Stu stu = new Stu();
+        stu.setName("Jack");
+        stu.setAge(19);
+
+        stuMapper.insert(stu);//insert与insertSelective  方法比较，如果insertSelective有属性为空，则会采用默认值
+
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public void updateStu(int id) {
+        Stu stu = new Stu();
+        stu.setName("lucy");
+        stu.setAge(20);
+        stu.setId(id);
+        stuMapper.updateByPrimaryKey(stu);
 
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
     public void deleteStu(int id) {
+
+        stuMapper.deleteByPrimaryKey(id);
 
     }
 }
