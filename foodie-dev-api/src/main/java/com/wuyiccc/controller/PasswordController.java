@@ -1,6 +1,7 @@
 package com.wuyiccc.controller;
 
 import com.wuyiccc.service.UserService;
+import com.wuyiccc.utils.WUYICCCJSONResult;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,24 +25,24 @@ public class PasswordController {
 
 
     @GetMapping("/usernameIsExist")
-    public HttpStatus usernameExist(@RequestParam String username){
+    public WUYICCCJSONResult usernameExist(@RequestParam String username){
 
 
         //1.判断用户名不能为空
         if(StringUtils.isBlank(username)){//判断是否是null和空字符串 org.apache.commons.lang3.StringUtils
-            return HttpStatus.INTERNAL_SERVER_ERROR;
+            return WUYICCCJSONResult.errorMsg("用户名不能为空");
         }
 
         //2.查找注册的用户名是否存在
         boolean isExist = userService.queryUsernameExist(username);
 
         if(isExist){//如果用户名已经存在，那么返回500
-            return HttpStatus.INTERNAL_SERVER_ERROR;
+            return WUYICCCJSONResult.errorMsg("用户名已经存在");
         }
 
 
         //请求成功，用户名没有重复
-        return HttpStatus.OK;
+        return WUYICCCJSONResult.ok();
 
 
 
