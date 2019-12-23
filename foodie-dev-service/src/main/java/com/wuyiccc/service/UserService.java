@@ -1,5 +1,8 @@
 package com.wuyiccc.service;
 
+import com.wuyiccc.pojo.Users;
+import com.wuyiccc.pojo.bo.UserBO;
+
 /**
  * @author wuyiccc
  * @date 2019/12/23 10:36
@@ -9,5 +12,10 @@ public interface UserService {
 
 
     public boolean queryUsernameExist(String username);
+
+
+    public Users createUser(UserBO userBO);
+
+
 
 }
