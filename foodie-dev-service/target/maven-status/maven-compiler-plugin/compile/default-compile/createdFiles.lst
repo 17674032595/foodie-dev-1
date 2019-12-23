@@ -1,2 +1,4 @@
+com\wuyiccc\service\impl\UserServiceImpl.class
 com\wuyiccc\service\impl\StuServiceImpl.class
 com\wuyiccc\service\StuService.class
+com\wuyiccc\service\UserService.class

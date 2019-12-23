@@ -15,8 +15,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * 岂曰无衣，与子同袍~
  */
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+//@RunWith(SpringRunner.class)
+//@SpringBootTest(classes = Application.class)
 public class TransTest {
 
     @Autowired
@@ -25,7 +25,7 @@ public class TransTest {
     @Autowired
     private TestTransService testTransService;
 
-    @Test
+    //@Test
     public void myTest(){
         testTransService.testPropagationTrans();
     }

@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/PasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/test/java/com/test/TransTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/test/java/com/test/TransTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/foodie-dev-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/foodie-dev-api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/foodie-dev-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/foodie-dev-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/impl/TestTransServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/impl/TestTransServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/foodie-dev-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/foodie-dev-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -75,6 +89,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wuyiccc.service" />
       <recent name="com.wuyiccc.controller" />
       <recent name="com.wuyiccc.mapper" />
       <recent name="com.wuyiccc.pojo" />
@@ -86,7 +101,7 @@
       <recent name="E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-mapper\src\main\java\com\wuyiccc\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TransTest.myTest">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="foodie-dev" />
       <working_directory value="$PROJECT_DIR$" />
@@ -133,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TransTest.myTest" />
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.TransTest.myTest" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +193,9 @@
       <workItem from="1576593460914" duration="195000" />
       <workItem from="1576750724816" duration="5834000" />
       <workItem from="1576804471031" duration="18329000" />
-      <workItem from="1576888449382" duration="1964000" />
+      <workItem from="1576888449382" duration="7269000" />
+      <workItem from="1577002513315" duration="4160000" />
+      <workItem from="1577066511479" duration="7219000" />
     </task>
     <task id="LOCAL-00001" summary="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common">
       <created>1575962871862</created>
@@ -222,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576842156642</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1.修改mapper.xml 文件之前">
+      <created>1576890680283</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576890680283</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,61 +273,62 @@
     <MESSAGE value="1.完成service测试文件编写，并且进行controller测试" />
     <MESSAGE value="1.完成stu测试的service和controller层的其他方法的编写" />
     <MESSAGE value="1.完成事务的测试分析" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.完成事务的测试分析" />
+    <MESSAGE value="1.修改mapper.xml 文件之前" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.修改mapper.xml 文件之前" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1576823573557">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1577069407937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1576823573557" />
-    <state x="455" y="133" key="CommitChangelistDialog2" timestamp="1576842155729">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1577069407937" />
+    <state x="455" y="133" key="CommitChangelistDialog2" timestamp="1577097636890">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="455" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1576842155729" />
+    <state x="455" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1577097636890" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1576546098544">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1576546098544" />
-    <state width="1877" height="337" key="GridCell.Tab.0.bottom" timestamp="1576844838070">
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576844838070" />
-    <state width="1877" height="337" key="GridCell.Tab.0.center" timestamp="1576844838070">
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.0.center" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576844838070" />
-    <state width="1877" height="337" key="GridCell.Tab.0.left" timestamp="1576844838070">
+    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.0.left" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576844838070" />
-    <state width="1877" height="337" key="GridCell.Tab.0.right" timestamp="1576844838070">
+    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.0.right" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576844838070" />
-    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1576825133585">
+    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576825133585" />
-    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1576825133584">
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576825133584" />
-    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1576825133584">
+    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576825133584" />
-    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1576825133584">
+    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1577097533563">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576825133584" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577097533563" />
     <state x="553" y="186" key="SettingsEditor" timestamp="1576809637112">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -316,10 +341,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1576842260758" />
-    <state x="526" y="328" key="com.intellij.ide.util.TipDialog" timestamp="1576888450680">
+    <state x="526" y="328" key="com.intellij.ide.util.TipDialog" timestamp="1577066512792">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="526" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1576888450680" />
+    <state x="526" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577066512792" />
     <state x="334" y="234" key="new project wizard" timestamp="1575962732967">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
