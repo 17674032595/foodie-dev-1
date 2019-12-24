@@ -92,6 +92,23 @@
             <version>1.3.2</version>
         </dependency>
 
+        <!--swagger2文档api生成配置-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>  <!--官方核心依赖-->
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>  <!--官方依赖-->
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.6</version>
+        </dependency>
+
 
     </dependencies>
 

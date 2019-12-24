@@ -49,7 +49,7 @@ public class PasswordController {
     }
 
     @PostMapping("/regist")
-    public WUYICCCJSONResult register(@RequestBody UserBO userBO){
+    public WUYICCCJSONResult regist(@RequestBody UserBO userBO){
         String username = userBO.getUsername();
         String password = userBO.getPassword();
         String confirmPassword = userBO.getConfirmPassword();

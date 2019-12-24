@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/config/Swagger2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/PasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/PasswordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/PasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/PasswordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-common/target/classes/org/n3r/idworker/Sid.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-common/target/classes/org/n3r/idworker/Sid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +31,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +77,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../foodie_other_files/mybatis-generator-for-wuyiccc" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -218,7 +218,8 @@
       <workItem from="1577066511479" duration="14302000" />
       <workItem from="1577104759696" duration="1253000" />
       <workItem from="1577111744581" duration="58000" />
-      <workItem from="1577150726619" duration="4341000" />
+      <workItem from="1577150726619" duration="6618000" />
+      <workItem from="1577167923310" duration="1648000" />
     </task>
     <task id="LOCAL-00001" summary="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common">
       <created>1575962871862</created>
@@ -290,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577105376826</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="1.完成注册用户的controller逻辑编写---rest-api接口为 password/regist">
+      <created>1577165577264</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577165577264</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,65 +339,66 @@
     <MESSAGE value="1.判断用户注册时，用户名是否存在的逻辑判断(service层+controller层的编写)" />
     <MESSAGE value="1.自定义响应类型数据结构，并修改PasswordController类的方法" />
     <MESSAGE value="1.完成注册用户的service逻辑的初步编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.完成注册用户的service逻辑的初步编写" />
+    <MESSAGE value="1.完成注册用户的controller逻辑编写---rest-api接口为 password/regist" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.完成注册用户的controller逻辑编写---rest-api接口为 password/regist" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1577103742236">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1577103742236" />
-    <state x="455" y="133" key="CommitChangelistDialog2" timestamp="1577105375347">
+    <state x="762" y="155" key="CommitChangelistDialog2" timestamp="1577165575783">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="455" y="133" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1577105375347" />
+    <state x="762" y="155" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1577165575783" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1577098693256">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1577098693256" />
-    <state width="1877" height="337" key="GridCell.Tab.0.bottom" timestamp="1577165073572">
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom" timestamp="1577169748080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577165073572" />
-    <state width="1877" height="337" key="GridCell.Tab.0.center" timestamp="1577165073572">
+    <state width="1877" height="337" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748080" />
+    <state width="1877" height="337" key="GridCell.Tab.0.center" timestamp="1577169748080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577165073572" />
-    <state width="1877" height="337" key="GridCell.Tab.0.left" timestamp="1577165073571">
+    <state width="1877" height="337" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748080" />
+    <state width="1877" height="337" key="GridCell.Tab.0.left" timestamp="1577169748080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577165073571" />
-    <state width="1877" height="337" key="GridCell.Tab.0.right" timestamp="1577165073572">
+    <state width="1877" height="337" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748080" />
+    <state width="1877" height="337" key="GridCell.Tab.0.right" timestamp="1577169748080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577165073572" />
-    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1577165059264">
+    <state width="1877" height="337" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748080" />
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom" timestamp="1577169748083">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577165059264" />
-    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1577165059263">
+    <state width="1877" height="337" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748083" />
+    <state width="1877" height="337" key="GridCell.Tab.1.center" timestamp="1577169748080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577165059263" />
-    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1577165059263">
+    <state width="1877" height="337" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748080" />
+    <state width="1877" height="337" key="GridCell.Tab.1.left" timestamp="1577169748080">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577165059263" />
-    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1577165059263">
+    <state width="1877" height="337" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748080" />
+    <state width="1877" height="337" key="GridCell.Tab.1.right" timestamp="1577169748082">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577165059263" />
-    <state x="553" y="186" key="SettingsEditor" timestamp="1576809637112">
+    <state width="1877" height="337" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1577169748082" />
+    <state x="553" y="186" key="SettingsEditor" timestamp="1577166432366">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="553" y="186" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1576809637112" />
+    <state x="553" y="186" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1577166432366" />
     <state x="1141" y="478" width="582" height="524" key="StructurePopup" timestamp="1576809326316">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -398,10 +407,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1577105393742" />
-    <state x="526" y="328" key="com.intellij.ide.util.TipDialog" timestamp="1577151141444">
+    <state x="526" y="328" key="com.intellij.ide.util.TipDialog" timestamp="1577168122642">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="526" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577151141444" />
+    <state x="526" y="328" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577168122642" />
     <state x="567" y="245" width="786" height="590" key="find.popup" timestamp="1577099800032">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -410,9 +419,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="334" y="234" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1575962732967" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577099724699">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1577168292162">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1577099724699" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1577168292162" />
   </component>
 </project>
