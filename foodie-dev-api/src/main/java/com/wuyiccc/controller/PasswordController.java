@@ -1,14 +1,11 @@
 package com.wuyiccc.controller;
 
+import com.wuyiccc.pojo.bo.UserBO;
 import com.wuyiccc.service.UserService;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author wuyiccc
@@ -24,6 +21,11 @@ public class PasswordController {
     private UserService userService;
 
 
+    /**
+     * 判断用户名是否存在，提供给前端的api接口i
+     * @param username
+     * @return
+     */
     @GetMapping("/usernameIsExist")
     public WUYICCCJSONResult usernameExist(@RequestParam String username){
 
@@ -44,8 +46,47 @@ public class PasswordController {
         //请求成功，用户名没有重复
         return WUYICCCJSONResult.ok();
 
+    }
+
+    @PostMapping("/regist")
+    public WUYICCCJSONResult register(@RequestBody UserBO userBO){
+        String username = userBO.getUsername();
+        String password = userBO.getPassword();
+        String confirmPassword = userBO.getConfirmPassword();
+
+        //0.判断用户名，密码，确认密码是否为空
+        if(StringUtils.isBlank(username)||StringUtils.isBlank(password)||StringUtils.isBlank(confirmPassword)){
+            return WUYICCCJSONResult.errorMsg("用户名或密码不能为空");
+        }
+
+        //1.判断用户名是否存在 : 这里判断是为了防止有人绕过前端逻辑，直接进行api接口的访问
+        boolean isExist = userService.queryUsernameExist(username);
+        if(isExist){
+            return WUYICCCJSONResult.errorMsg("用户名已经存在");
+        }
+
+        //2.判断密码是否>=6位
+        if(password.length()<6){
+            return WUYICCCJSONResult.errorMsg("密码长度不能少于6位");
+        }
+
+
+
+        //3.判断密码与确认密码是否一致
+        if(!password.equals(confirmPassword)){
+            return WUYICCCJSONResult.errorMsg("两次密码输入不一致");
+        }
+
+
+        //4.实现注册
+        userService.createUser(userBO);
+        return WUYICCCJSONResult.ok();
 
 
     }
+
+
+
+
 
 }
