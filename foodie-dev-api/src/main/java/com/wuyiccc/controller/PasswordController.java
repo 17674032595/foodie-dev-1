@@ -3,6 +3,8 @@ package com.wuyiccc.controller;
 import com.wuyiccc.pojo.bo.UserBO;
 import com.wuyiccc.service.UserService;
 import com.wuyiccc.utils.WUYICCCJSONResult;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2019/12/23 17:58
  * 岂曰无衣，与子同袍~
  */
-
+@Api(value = "注册登录",tags = {"用于注册登录的相关接口"})
 @RestController
 @RequestMapping("password") // 不加/ 代表是相对路径 加/代表是绝对路径
 public class PasswordController {
@@ -26,6 +28,7 @@ public class PasswordController {
      * @param username
      * @return
      */
+    @ApiOperation(value = "用户名是否存在", notes = "用户名是否存在" ,httpMethod = "GET")
     @GetMapping("/usernameIsExist")
     public WUYICCCJSONResult usernameExist(@RequestParam String username){
 
@@ -47,7 +50,7 @@ public class PasswordController {
         return WUYICCCJSONResult.ok();
 
     }
-
+    @ApiOperation(value = "用户注册", notes = "用户注册" ,httpMethod = "POST")
     @PostMapping("/regist")
     public WUYICCCJSONResult regist(@RequestBody UserBO userBO){
         String username = userBO.getUsername();

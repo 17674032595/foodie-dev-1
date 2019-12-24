@@ -3,6 +3,7 @@ package com.wuyiccc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author wuyiccc
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //与@Controller类似，不过返回的是json对象
 //@Controller
+@ApiIgnore //生成文档时，忽略该controller
 @RestController
 public class HelloController {
 

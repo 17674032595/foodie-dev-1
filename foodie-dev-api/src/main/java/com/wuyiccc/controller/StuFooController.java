@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author wuyiccc
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 岂曰无衣，与子同袍~
  */
 
+@ApiIgnore //生成文档时，忽略该controller
 @RestController
 public class StuFooController {
 
