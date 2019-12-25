@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(value = "注册登录",tags = {"用于注册登录的相关接口"})
 @RestController
-@RequestMapping("password") // 不加/ 代表是相对路径 加/代表是绝对路径
-public class PasswordController {
+@RequestMapping("passport") // 不加/ 代表是相对路径 加/代表是绝对路径
+public class PassportController {
 
     @Autowired
     private UserService userService;
