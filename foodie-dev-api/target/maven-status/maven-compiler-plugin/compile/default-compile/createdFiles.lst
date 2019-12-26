@@ -1,5 +1,4 @@
+com\wuyiccc\config\Swagger2.class
 com\wuyiccc\Application.class
 com\wuyiccc\controller\StuFooController.class
-com\wuyiccc\config\Swagger2.class
 com\wuyiccc\controller\HelloController.class
-com\wuyiccc\controller\PasswordController.class

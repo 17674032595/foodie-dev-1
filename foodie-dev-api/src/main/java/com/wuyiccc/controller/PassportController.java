@@ -1,7 +1,9 @@
 package com.wuyiccc.controller;
 
+import com.wuyiccc.pojo.Users;
 import com.wuyiccc.pojo.bo.UserBO;
 import com.wuyiccc.service.UserService;
+import com.wuyiccc.utils.MD5Utils;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -86,6 +88,28 @@ public class PassportController {
         return WUYICCCJSONResult.ok();
 
 
+    }
+
+
+    @ApiOperation(value = "用户登录",notes = "用户登录",httpMethod = "POST")
+    @PostMapping("/login")
+    public WUYICCCJSONResult login(@RequestBody UserBO userBO) throws Exception{
+
+        String username =  userBO.getUsername();
+        String password = userBO.getPassword();
+
+        if(StringUtils.isBlank(username)|| StringUtils.isBlank(password)){
+            return WUYICCCJSONResult.errorMsg("用户名或密码不能为空");
+        }
+
+        Users resultUser = userService.queryUserForLogin(username,
+                MD5Utils.getMD5Str(password));
+
+        if(resultUser==null){
+            return WUYICCCJSONResult.errorMsg("用户名或者密码不正确");
+        }
+
+        return WUYICCCJSONResult.ok(resultUser);
     }
 
 

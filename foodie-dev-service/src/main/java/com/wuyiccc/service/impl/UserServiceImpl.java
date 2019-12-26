@@ -90,4 +90,18 @@ public class UserServiceImpl implements UserService {
 
         return user;//返回是为了在页面显示用户的基本信息
     }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public Users queryUserForLogin(String username,String password) {
+        Example example = new Example(Users.class);
+        Example.Criteria userCriteria = example.createCriteria();
+        userCriteria.andEqualTo("username",username);//"username" 是实体类的属性，而不是数据库的字段名称
+        userCriteria.andEqualTo("password",password);
+
+        Users result = usersMapper.selectOneByExample(example);
+
+
+        return result;
+    }
 }
