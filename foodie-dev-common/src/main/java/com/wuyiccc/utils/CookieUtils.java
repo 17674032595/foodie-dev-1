@@ -156,7 +156,7 @@ public final class CookieUtils {
      * @param cookieName
      * @param cookieValue
      * @param cookieMaxage
-     * @param encodeString
+     * @param encodeStrin
      */
     public static void setCookie(HttpServletRequest request, HttpServletResponse response, String cookieName,
                                  String cookieValue, int cookieMaxage, String encodeString) {
