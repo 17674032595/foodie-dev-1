@@ -1,3 +1,4 @@
+com\wuyiccc\aspect\ServiceLogAspect.class
 com\wuyiccc\config\Swagger2.class
 com\wuyiccc\Application.class
 com\wuyiccc\controller\StuFooController.class

@@ -58,6 +58,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public Users createUser(UserBO userBO) {
 
+
+
         String userId = sid.nextShort();//使用短id
 
         Users user = new Users();
@@ -94,6 +96,9 @@ public class UserServiceImpl implements UserService {
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public Users queryUserForLogin(String username,String password) {
+
+
+
         Example example = new Example(Users.class);
         Example.Criteria userCriteria = example.createCriteria();
         userCriteria.andEqualTo("username",username);//"username" 是实体类的属性，而不是数据库的字段名称
