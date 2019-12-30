@@ -2,7 +2,9 @@ package com.wuyiccc.controller;
 
 import com.wuyiccc.enums.YesOrNo;
 import com.wuyiccc.pojo.Carousel;
+import com.wuyiccc.pojo.Category;
 import com.wuyiccc.service.CarouselService;
+import com.wuyiccc.service.CategoryService;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -28,6 +30,9 @@ public class IndexController {
     @Autowired
     private CarouselService carouselService;
 
+    @Autowired
+    private CategoryService categoryService;
+
 
     @ApiOperation(value = "获取首页轮播图列表",notes = "获取首页轮播图列表",httpMethod = "GET")
     @GetMapping("/carousel")
@@ -37,5 +42,16 @@ public class IndexController {
         return WUYICCCJSONResult.ok(list);
 
     }
+
+    @ApiOperation(value = "获取商品分类(一级分类)",notes = "获取商品分类(一级分类)",httpMethod = "GET")
+    @GetMapping("/cats")
+    public WUYICCCJSONResult cats(){
+
+        List<Category> list = categoryService.queryAllRootLevelCats();
+        return WUYICCCJSONResult.ok(list);
+
+    }
+
+
 
 }

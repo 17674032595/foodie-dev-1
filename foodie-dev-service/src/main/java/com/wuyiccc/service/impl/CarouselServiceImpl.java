@@ -21,6 +21,12 @@ public class CarouselServiceImpl implements CarouselService {
     @Autowired
     private CarouselMapper carouselMapper;
 
+
+    /**
+     * 查询所有的轮播图
+     * @param isShow
+     * @return
+     */
     @Override
     public List<Carousel> queryAll(Integer isShow) {
 

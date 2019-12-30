@@ -1,6 +1,8 @@
 com\wuyiccc\service\CarouselService.class
+com\wuyiccc\service\impl\CategoryServiceImpl.class
 com\wuyiccc\service\impl\StuServiceImpl.class
 com\wuyiccc\service\UserService.class
+com\wuyiccc\service\CategoryService.class
 com\wuyiccc\service\impl\UserServiceImpl.class
 com\wuyiccc\service\StuService.class
 com\wuyiccc\service\impl\CarouselServiceImpl.class
