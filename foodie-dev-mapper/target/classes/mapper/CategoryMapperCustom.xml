@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wuyiccc.mapper.CategoryMapperCustom" >
+
+
+    <resultMap id="myCategoryVO" type="com.wuyiccc.pojo.vo.CategoryVO">
+        <id column="id" property="id" ></id> <!--jdbcType 可加可不加--> 
+        <result column="name" property="name"></result>
+        <result column="type" property="type"></result>
+        <result column="fatherId" property="fatherId"></result>
+        <!--collection property对应的属性名称，ofType 属性类型-->
+        <collection property="subCatList" ofType="com.wuyiccc.pojo.vo.SubCategoryVO">
+            <id column="subId" property="subId" ></id> <!--jdbcType 可加可不加-->
+            <result column="subName" property="subName"></result>
+            <result column="subType" property="subType"></result>
+            <result column="subFatherId" property="subFatherId"></result>
+        </collection>
+        
+        
+    </resultMap>
+
+
+  <select id="getSubCatList" parameterType="int" resultMap="myCategoryVO">
+    SELECT
+        f.id as id,
+        f.`name` as `name`,
+        f.type as type,
+        f.father_id as fatherId,
+        c.id as subId,
+        c.`name` as subName,
+        c.type as subType,
+        c.father_id as subFatherId
+    from
+        category f
+    LEFT JOIN
+        category c
+    on
+        f.id=c.father_id
+    where
+        f.father_id=#{rootCatId}
+  </select>
+
+
+
+</mapper>

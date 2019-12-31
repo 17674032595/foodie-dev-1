@@ -1,10 +1,14 @@
 package com.wuyiccc.service.impl;
 
 import com.wuyiccc.mapper.CategoryMapper;
+import com.wuyiccc.mapper.CategoryMapperCustom;
 import com.wuyiccc.pojo.Category;
+import com.wuyiccc.pojo.vo.CategoryVO;
 import com.wuyiccc.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
@@ -21,7 +25,11 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
+    @Autowired
+    private CategoryMapperCustom categoryMapperCustom;
 
+
+    @Transactional(propagation = Propagation.SUPPORTS)
     @Override
     public List<Category> queryAllRootLevelCats() {
 
@@ -34,6 +42,17 @@ public class CategoryServiceImpl implements CategoryService {
 
         return results;
     }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public List<CategoryVO> getSubCatList(Integer rootCatId) {
+
+        List<CategoryVO> results = categoryMapperCustom.getSubCatList(rootCatId);
+
+
+        return results;
+    }
+
 
 }
 
