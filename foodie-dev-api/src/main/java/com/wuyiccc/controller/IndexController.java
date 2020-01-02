@@ -4,6 +4,7 @@ import com.wuyiccc.enums.YesOrNo;
 import com.wuyiccc.pojo.Carousel;
 import com.wuyiccc.pojo.Category;
 import com.wuyiccc.pojo.vo.CategoryVO;
+import com.wuyiccc.pojo.vo.NewItemsVO;
 import com.wuyiccc.service.CarouselService;
 import com.wuyiccc.service.CategoryService;
 import com.wuyiccc.utils.WUYICCCJSONResult;
@@ -67,6 +68,17 @@ public class IndexController {
         }
 
         List<CategoryVO> list = categoryService.getSubCatList(rootCatId);
+        return WUYICCCJSONResult.ok(list);
+    }
+
+
+    @ApiOperation(value = "查询每个一级分类下的最新6条商品数据",notes = "查询每个一级分类下的最新6条商品数据",httpMethod = "GET")
+    @GetMapping("/sixNewItems/{rootCatId}")
+    public WUYICCCJSONResult sixNewItems(
+            @ApiParam(name = "rootCatId" ,value = "一级分类id", required = true)
+            @PathVariable Integer rootCatId
+    ){
+        List<NewItemsVO> list = categoryService.getSixNewItemsLazy(rootCatId);
         return WUYICCCJSONResult.ok(list);
     }
 

@@ -2,6 +2,7 @@ package com.wuyiccc.service;
 
 import com.wuyiccc.pojo.Category;
 import com.wuyiccc.pojo.vo.CategoryVO;
+import com.wuyiccc.pojo.vo.NewItemsVO;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface CategoryService {
     public List<Category> queryAllRootLevelCats();
 
     public List<CategoryVO> getSubCatList(Integer rootCatId);
+
+    public List<NewItemsVO> getSixNewItemsLazy(Integer rootCatId);
 }

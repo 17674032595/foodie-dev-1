@@ -1,6 +1,7 @@
 E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\Application.java
 E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\config\CorsConfig.java
 E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\controller\HelloController.java
+E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\controller\IndexController.java
 E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\config\Swagger2.java
 E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\controller\PassportController.java
 E:\code_learn\java_structure_mooc_bus\foodie-dev\foodie-dev-api\src\main\java\com\wuyiccc\aspect\ServiceLogAspect.java
