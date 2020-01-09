@@ -10,6 +10,7 @@ import com.wuyiccc.pojo.ItemsParam;
 import com.wuyiccc.pojo.ItemsSpec;
 import com.wuyiccc.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
@@ -21,6 +22,7 @@ import java.util.List;
  * @date 2020/1/6 20:15
  * 岂曰无衣，与子同袍~
  */
+@Service
 public class ItemServiceImpl implements ItemService {
 
 

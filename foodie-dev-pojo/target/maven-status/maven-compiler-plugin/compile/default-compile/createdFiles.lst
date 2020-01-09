@@ -15,4 +15,5 @@ com\wuyiccc\pojo\Items.class
 com\wuyiccc\pojo\vo\SubCategoryVO.class
 com\wuyiccc\pojo\ItemsParam.class
 com\wuyiccc\pojo\ItemsSpec.class
+com\wuyiccc\pojo\vo\ItemInfoVO.class
 com\wuyiccc\pojo\Stu.class
