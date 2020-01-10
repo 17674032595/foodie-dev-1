@@ -1,13 +1,9 @@
 package com.wuyiccc.service.impl;
 
-import com.wuyiccc.mapper.ItemsImgMapper;
-import com.wuyiccc.mapper.ItemsMapper;
-import com.wuyiccc.mapper.ItemsParamMapper;
-import com.wuyiccc.mapper.ItemsSpecMapper;
-import com.wuyiccc.pojo.Items;
-import com.wuyiccc.pojo.ItemsImg;
-import com.wuyiccc.pojo.ItemsParam;
-import com.wuyiccc.pojo.ItemsSpec;
+import com.wuyiccc.enums.ItemCommentLevel;
+import com.wuyiccc.mapper.*;
+import com.wuyiccc.pojo.*;
+import com.wuyiccc.pojo.vo.ItemCommentsLevelCountsVO;
 import com.wuyiccc.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,6 +33,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemsParamMapper itemsParamMapper;
+
+    @Autowired
+    private ItemsCommentsMapper itemsCommentsMapper;
 
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -82,5 +81,35 @@ public class ItemServiceImpl implements ItemService {
         criteria.andEqualTo("itemId",itemId);
         ItemsParam result = itemsParamMapper.selectOneByExample(itemParamExp);
         return result;
+    }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public ItemCommentsLevelCountsVO queryItemCommentLevelCounts(String itemId) {
+
+
+        Integer goodCounts = getCommentsCounts(itemId, ItemCommentLevel.GOOD.type);
+        Integer normalCounts = getCommentsCounts(itemId, ItemCommentLevel.NORMAL.type);
+        Integer badCounts = getCommentsCounts(itemId, ItemCommentLevel.BAD.type);
+        Integer totalCounts = goodCounts + normalCounts + badCounts;
+
+
+        ItemCommentsLevelCountsVO countsVO = new ItemCommentsLevelCountsVO();
+        countsVO.setTotalCounts(totalCounts);
+        countsVO.setGoodCounts(goodCounts);
+        countsVO.setNormalCounts(normalCounts);
+        countsVO.setBadCounts(badCounts);
+        return countsVO;
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    Integer getCommentsCounts(String itemId,Integer level){//只有动态绑定的方法才能添加事务
+
+        ItemsComments comment = new ItemsComments();
+        comment.setItemId(itemId);
+        comment.setCommentLevel(level);
+        int counts = itemsCommentsMapper.selectCount(comment);
+        return counts;
     }
 }

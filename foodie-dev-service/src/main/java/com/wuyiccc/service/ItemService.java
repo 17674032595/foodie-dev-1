@@ -4,6 +4,7 @@ import com.wuyiccc.pojo.Items;
 import com.wuyiccc.pojo.ItemsImg;
 import com.wuyiccc.pojo.ItemsParam;
 import com.wuyiccc.pojo.ItemsSpec;
+import com.wuyiccc.pojo.vo.ItemCommentsLevelCountsVO;
 
 import java.util.List;
 
@@ -42,4 +43,7 @@ public interface ItemService {
      * @return
      */
     public ItemsParam queryItemParam(String itemId);
+
+
+    public ItemCommentsLevelCountsVO queryItemCommentLevelCounts(String itemId);
 }
