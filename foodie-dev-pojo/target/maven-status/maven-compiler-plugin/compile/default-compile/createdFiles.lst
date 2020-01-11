@@ -5,6 +5,7 @@ com\wuyiccc\pojo\Orders.class
 com\wuyiccc\pojo\vo\CategoryVO.class
 com\wuyiccc\pojo\ItemsComments.class
 com\wuyiccc\pojo\Users.class
+com\wuyiccc\pojo\vo\ItemCommentVo.class
 com\wuyiccc\pojo\OrderStatus.class
 com\wuyiccc\pojo\Category.class
 com\wuyiccc\pojo\ItemsImg.class
@@ -17,3 +18,4 @@ com\wuyiccc\pojo\ItemsParam.class
 com\wuyiccc\pojo\ItemsSpec.class
 com\wuyiccc\pojo\vo\ItemInfoVO.class
 com\wuyiccc\pojo\Stu.class
+com\wuyiccc\pojo\vo\ItemCommentsLevelCountsVO.class

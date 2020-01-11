@@ -41,7 +41,12 @@ mybatis:
 ##########
 ##  mybatis mapper配置
 ########
+# 通用mapper配置
 mapper:
   mappers: com.wuyiccc.my.mapper.MyMapper
   not-empty: false
   identity: MYSQL
+# 分页插件配置
+pagehelper:
+  helper-dialect: mysql   # 数据库方言
+  support-methods-arguments: true  # 是否支持分页的参数传参

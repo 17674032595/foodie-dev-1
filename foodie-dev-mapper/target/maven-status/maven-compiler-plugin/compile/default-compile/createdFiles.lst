@@ -13,3 +13,4 @@ com\wuyiccc\mapper\CarouselMapper.class
 com\wuyiccc\mapper\OrdersMapper.class
 com\wuyiccc\mapper\ItemsSpecMapper.class
 com\wuyiccc\mapper\OrderStatusMapper.class
+com\wuyiccc\mapper\ItemsMapperCustom.class

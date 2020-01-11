@@ -1,17 +1,23 @@
 package com.wuyiccc.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.wuyiccc.enums.ItemCommentLevel;
 import com.wuyiccc.mapper.*;
 import com.wuyiccc.pojo.*;
+import com.wuyiccc.pojo.vo.ItemCommentVo;
 import com.wuyiccc.pojo.vo.ItemCommentsLevelCountsVO;
 import com.wuyiccc.service.ItemService;
+import com.wuyiccc.utils.PagedGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author wuyiccc
@@ -36,6 +42,9 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemsCommentsMapper itemsCommentsMapper;
+
+    @Autowired
+    private ItemsMapperCustom itemsMapperCustom;
 
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -103,6 +112,8 @@ public class ItemServiceImpl implements ItemService {
         return countsVO;
     }
 
+
+
     @Transactional(propagation = Propagation.SUPPORTS)
     Integer getCommentsCounts(String itemId,Integer level){//只有动态绑定的方法才能添加事务
 
@@ -111,5 +122,43 @@ public class ItemServiceImpl implements ItemService {
         comment.setCommentLevel(level);
         int counts = itemsCommentsMapper.selectCount(comment);
         return counts;
+    }
+
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult queryPagedComments(String itemId,
+                                                  Integer level,
+                                                  Integer page,
+                                                  Integer pageSize) {
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("itemId",itemId);
+        map.put("level",level);
+
+        //使用pagehelper : page  查询第几页  pageSize
+        PageHelper.startPage(page,pageSize);
+
+        List<ItemCommentVo> list = itemsMapperCustom.queryItemComments(map);  //list 就是分页之后的数据
+
+        PagedGridResult grid = setterPagedGrid(list, page);
+
+
+        return grid;
+    }
+
+    //提供通用化的分页方法
+    private PagedGridResult setterPagedGrid(List<?> list,Integer page){
+
+        PageInfo<?> pageList = new PageInfo<>(list);  // 将分页之后的数据交给com.github.pagehelper.PageInfo对象，用来获取当前页的信息
+
+        // 为了和前端的数据名称对应，我们这里需要更改数据对应的key，进行如下变化
+        PagedGridResult grid = new PagedGridResult();
+        grid.setPage(page);   // 将当前页index 交给grid对象
+        grid.setRows(list);   // 将数据信息交给grid 对象
+        grid.setTotal(pageList.getPages());  // 通过PageInfo 来获取页面的总页数，交给grid
+        grid.setRecords(pageList.getTotal());  // 通过PageInfo 来获取当前页面的总记录条数，交给grid
+        return grid;
+
     }
 }
