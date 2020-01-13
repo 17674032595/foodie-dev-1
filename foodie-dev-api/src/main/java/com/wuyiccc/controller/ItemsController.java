@@ -6,6 +6,7 @@ import com.wuyiccc.pojo.ItemsParam;
 import com.wuyiccc.pojo.ItemsSpec;
 import com.wuyiccc.pojo.vo.ItemCommentsLevelCountsVO;
 import com.wuyiccc.pojo.vo.ItemInfoVO;
+import com.wuyiccc.pojo.vo.ShopcartVO;
 import com.wuyiccc.service.ItemService;
 import com.wuyiccc.utils.PagedGridResult;
 import com.wuyiccc.utils.WUYICCCJSONResult;
@@ -133,5 +134,19 @@ public class ItemsController extends BaseController{
         PagedGridResult grid = itemService.searchItemsByThirdCat(catId, sort, page, pageSize);
 
         return  WUYICCCJSONResult.ok(grid);
+    }
+
+    @ApiOperation(value = "根据商品规格ids查找最新的商品数据",notes = "根据商品规格ids查找最新的商品数据",httpMethod = "GET")
+    @GetMapping("/refresh")
+    public WUYICCCJSONResult refresh(
+            @ApiParam(name = "itemSpecIds",value = "拼接的规格ids",required = true,example = "1001,1003,1005")
+            @RequestParam String itemSpecIds
+    ){
+        if (StringUtils.isBlank(itemSpecIds)){
+            return WUYICCCJSONResult.ok();
+        }
+        List<ShopcartVO> list = itemService.queryItemsBySpecIds(itemSpecIds);
+
+        return WUYICCCJSONResult.ok(list);
     }
 }
