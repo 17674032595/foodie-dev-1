@@ -101,6 +101,11 @@ public class PassportController {
         CookieUtils.setCookie(request, response, "user",
                 JsonUtils.objectToJson(userResult), true);//使用cookie与json工具类+与加密isEncode，键要写user，因为前端获取的时候是user
 
+
+        //TODO 生成用户token，存入redis会话
+
+        //TODO 同步购物车数据
+
         return WUYICCCJSONResult.ok();
 
 
@@ -131,6 +136,10 @@ public class PassportController {
         //设置cookie
         CookieUtils.setCookie(request, response, "user",
                 JsonUtils.objectToJson(userResult), true);//使用cookie与json工具类+与加密isEncode，键要写user，因为前端获取的时候是user
+
+        //TODO 生成用户token，存入redis会话
+
+        //TODO 同步购物车数据
 
 
         return WUYICCCJSONResult.ok(userResult);

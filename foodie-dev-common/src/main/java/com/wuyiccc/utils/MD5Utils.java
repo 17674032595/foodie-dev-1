@@ -13,7 +13,7 @@ import java.security.MessageDigest;
 public class MD5Utils {
 
     /**
-     * @Description: 对字符串进行md5和base64加密
+     * @Description: 对字符串进行md5加密
      */
 
     public static String getMD5Str(String strValue) throws Exception {
