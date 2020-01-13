@@ -104,4 +104,34 @@ public class ItemsController extends BaseController{
 
         return WUYICCCJSONResult.ok(grid);
     }
+
+    @ApiOperation(value = "根据子分类搜索商品列表",notes = "根据子分类搜索商品列表",httpMethod = "GET")
+    @GetMapping("/catItems")
+    public WUYICCCJSONResult searchItemsByCatId(
+            @ApiParam(name = "catId",value = "三级分类id",required = true)
+            @RequestParam Integer catId,
+            @ApiParam(name = "sort",value = "排序",required = false)
+            @RequestParam String sort,
+            @ApiParam(name = "page",value = "查询下一页的第几页",required = false)
+            @RequestParam Integer page,
+            @ApiParam(name = "pageSize",value = "分页的每一页显示的数据条数",required = false)
+            @RequestParam Integer pageSize
+    ){
+
+        if(catId == null){
+            return WUYICCCJSONResult.errorMsg("查询的商品分类id不能为空");
+        }
+
+
+        if (page == null){
+            page = 1;
+        }
+        if(pageSize == null){
+            pageSize = PAGE_SIZE;  // 默认20
+        }
+
+        PagedGridResult grid = itemService.searchItemsByThirdCat(catId, sort, page, pageSize);
+
+        return  WUYICCCJSONResult.ok(grid);
+    }
 }

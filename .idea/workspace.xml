@@ -2,43 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/BaseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/ItemsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-common/src/main/java/com/wuyiccc/utils/PagedGridResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-common/target/classes/META-INF/foodie-dev-common.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-common/target/classes/com/wuyiccc/enums/ItemCommentLevel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-common/target/classes/com/wuyiccc/utils/PagedGridResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsMapperCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/classes/com/wuyiccc/mapper/ItemsMapperCustom.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/classes/mapper/ItemsMapperCustom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/vo/ItemCommentVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/target/classes/com/wuyiccc/pojo/vo/ItemCommentVo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/target/classes/com/wuyiccc/pojo/vo/ItemCommentsLevelCountsVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/target/classes/com/wuyiccc/pojo/vo/ItemInfoVO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-service/target/classes/META-INF/foodie-dev-service.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/ItemService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/impl/ItemServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/ItemsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" afterDir="false" />
+    </list>
+    <list id="0e577ea8-d3a4-4909-b383-3e2ca3a57756" name="1.实现商品评价的分页功能" comment="">
+      <change afterPath="$PROJECT_DIR$/foodie-dev-common/src/main/java/com/wuyiccc/utils/DesensitizationUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/vo/SearchItemsVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/ItemsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/ItemsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/ItemsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/classes/com/wuyiccc/controller/ItemsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/foodie-dev-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/foodie-dev-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-common/target/foodie-dev-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-common/target/foodie-dev-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/CategoryMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/CategoryMapperCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsMapperCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapperCustom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/classes/com/wuyiccc/mapper/ItemsMapperCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/classes/com/wuyiccc/mapper/ItemsMapperCustom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/classes/mapper/ItemsMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/classes/mapper/ItemsMapperCustom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/foodie-dev-mapper-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/foodie-dev-mapper-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-pojo/target/foodie-dev-pojo-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-pojo/target/foodie-dev-pojo-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-pojo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/ItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/ItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/impl/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/classes/com/wuyiccc/service/impl/ItemServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/foodie-dev-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/foodie-dev-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +63,54 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="4" end1="22" start2="4" end2="10" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="23" end1="23" start2="11" end2="12" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="24" end1="26" start2="13" end2="15" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="27" end1="28" start2="16" end2="17" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="29" end1="30" start2="18" end2="18" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="31" end1="32" start2="19" end2="23" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="33" end1="34" start2="24" end2="25" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="39" end1="39" start2="30" end2="32" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="40" end1="41" start2="33" end2="33" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="72" end1="72" start2="64" end2="106" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="114" end1="115" start2="148" end2="149" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="145" end1="145" start2="179" end2="192" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="204" end1="204" start2="251" end2="252" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="228" end1="228" start2="276" end2="277" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="267" end1="268" start2="316" end2="317" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="451" end1="452" start2="500" end2="522" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="482" end1="484" start2="552" end2="552" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="507" end1="508" start2="575" end2="578" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="510" end1="511" start2="580" end2="581" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="513" end1="514" start2="583" end2="584" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="518" end1="519" start2="588" end2="589" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="521" end1="522" start2="591" end2="592" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="569" end1="570" start2="639" end2="640" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="574" end1="575" start2="644" end2="645" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="582" end1="583" start2="652" end2="653" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="585" end1="586" start2="655" end2="656" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsMapperCustom.xml">
+      <ranges>
+        <range start1="2" end1="3" start2="2" end2="3" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="5" end1="7" start2="5" end2="6" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="8" end1="21" start2="7" end2="20" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="22" end1="24" start2="21" end2="23" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="27" end1="28" start2="26" end2="27" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="30" end1="30" start2="29" end2="101" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/ItemsController.java">
+      <ranges>
+        <range start1="105" end1="105" start2="105" end2="134" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="106" end1="106" start2="135" end2="165" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -112,7 +153,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -143,6 +184,19 @@
       <framework value="gotest" />
       <kind value="DIRECTORY" />
       <method v="2" />
+    </configuration>
+    <configuration name="DesensitizationUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wuyiccc.utils.DesensitizationUtil" />
+      <module name="foodie-dev-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wuyiccc.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.wuyiccc.utils.MD5Utils" />
@@ -202,6 +256,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Application.DesensitizationUtil" />
         <item itemvalue="Application.Sid" />
         <item itemvalue="Application.MD5Utils" />
         <item itemvalue="JUnit.TransTest.myTest" />
@@ -226,6 +281,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="" />
+      <changelist id="0e577ea8-d3a4-4909-b383-3e2ca3a57756" name="1.实现商品评价的分页功能" comment="" />
       <created>1575961892027</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -265,7 +321,7 @@
       <workItem from="1578222480600" duration="1203000" />
       <workItem from="1578239187906" duration="70000" />
       <workItem from="1578307787619" duration="16336000" />
-      <workItem from="1578612995084" duration="18573000" />
+      <workItem from="1578612995084" duration="34237000" />
     </task>
     <task id="LOCAL-00001" summary="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common">
       <created>1575962871862</created>
@@ -449,7 +505,28 @@
       <option name="project" value="LOCAL" />
       <updated>1578619545937</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="1.实现商品评价的分页功能">
+      <created>1578756066369</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1578756066369</updated>
+    </task>
+    <task id="LOCAL-00028" summary="1.实现商品评价的分页功能">
+      <created>1578884329948</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1578884329948</updated>
+    </task>
+    <task id="LOCAL-00029" summary="1.实现商品搜索功能">
+      <created>1578884395433</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1578884395433</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,8 +557,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="2.完成foodie-dev-api的springboot初始化" />
-    <MESSAGE value="3.完成foodie-dev的数据库mapper，xml配置，pojo的生成" />
     <MESSAGE value="1.完成service测试文件编写，并且进行controller测试" />
     <MESSAGE value="1.完成stu测试的service和controller层的其他方法的编写" />
     <MESSAGE value="1.完成事务的测试分析" />
@@ -505,65 +580,67 @@
     <MESSAGE value="1.编写商品相关查询service" />
     <MESSAGE value="1.商品详情页的编写(注意后端与前端传递的VO对象的key，要对应，否则会出现数据显示异常的情况)" />
     <MESSAGE value="1.完成查询评价等级数量的功能编写" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.完成查询评价等级数量的功能编写" />
+    <MESSAGE value="1.实现商品评价的分页功能" />
+    <MESSAGE value="1.实现商品搜索功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.实现商品搜索功能" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1578623389175">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1578885539529">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578623389175" />
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578885539529" />
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577326400260">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577326400260" />
-    <state x="762" y="155" key="CommitChangelistDialog2" timestamp="1578884323033">
+    <state x="762" y="155" key="CommitChangelistDialog2" timestamp="1578884392425">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="762" y="155" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578884323033" />
+    <state x="762" y="155" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1578884392425" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1578239259065">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1578239259065" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1578886247914">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247914" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1578886247914">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247914" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1578886247914">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247914" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1578886247914">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247914" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1578886247911">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247911" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1578886247911">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247911" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1578886247911">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1578884329591">
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247911" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1578886247911">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578884329591" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1578886247911" />
     <state x="553" y="186" key="SettingsEditor" timestamp="1578876850034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -580,10 +657,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="806" y="456" key="VCS.ChangelistChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578884340676" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1578756073851">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1578884402547">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1578619557996" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1578884402547" />
     <state x="555" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1578612996408">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
