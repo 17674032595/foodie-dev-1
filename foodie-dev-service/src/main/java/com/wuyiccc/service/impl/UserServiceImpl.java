@@ -97,15 +97,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public Users queryUserForLogin(String username,String password) {
 
-
-
         Example example = new Example(Users.class);
         Example.Criteria userCriteria = example.createCriteria();
         userCriteria.andEqualTo("username",username);//"username" 是实体类的属性，而不是数据库的字段名称
         userCriteria.andEqualTo("password",password);
 
         Users result = usersMapper.selectOneByExample(example); //只能返回一个数据或者null，否则就会报错
-
 
         return result;
     }

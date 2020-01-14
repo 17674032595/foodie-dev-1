@@ -153,4 +153,22 @@ public class AddressController {
     }
 
 
+    @ApiOperation(value = "用户设置默认地址", notes = "用户设置默认地址", httpMethod = "POST")
+    @PostMapping("/setDefalut")
+    public WUYICCCJSONResult setDefault(
+            @ApiParam(name = "userId", value = "用户的id", required = true)
+            @RequestParam String userId,
+            @ApiParam(name = "addressId", value = "地址的id", required = true)
+            @RequestParam String addressId
+    ) {
+
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(addressId)) {
+            return WUYICCCJSONResult.errorMsg("用户id或者地址id不能为空");
+        }
+
+        addressService.updateUserAddressToBeDefault(userId, addressId);
+
+        return WUYICCCJSONResult.ok();
+    }
+
 }
