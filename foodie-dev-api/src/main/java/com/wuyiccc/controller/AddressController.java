@@ -1,17 +1,16 @@
 package com.wuyiccc.controller;
 
 import com.wuyiccc.pojo.UserAddress;
+import com.wuyiccc.pojo.bo.AddressBO;
 import com.wuyiccc.service.AddressService;
+import com.wuyiccc.utils.MobileEmailUtils;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +19,7 @@ import java.util.List;
  * @date 2020/1/14 14:52
  * 岂曰无衣，与子同袍~
  */
-@Api(value = "收货地址相关接口",tags = {"收货地址相关接口"})
+@Api(value = "收货地址相关接口", tags = {"收货地址相关接口"})
 @RestController
 @RequestMapping("address")
 public class AddressController {
@@ -37,20 +36,79 @@ public class AddressController {
     private AddressService addressService;
 
     @PostMapping("/list")
-    @ApiOperation(value = "根据用户id查询用户地址列表",notes = "根据用户id查询用户地址列表",httpMethod = "POST")
+    @ApiOperation(value = "根据用户id查询用户地址列表", notes = "根据用户id查询用户地址列表", httpMethod = "POST")
     public WUYICCCJSONResult list(
-            @ApiParam(name = "userId",value = "用户id",required = true)
+            @ApiParam(name = "userId", value = "用户id", required = true)
             @RequestParam String userId
-    ){
+    ) {
 
 
-        if(StringUtils.isBlank(userId)){
+        if (StringUtils.isBlank(userId)) {
             return WUYICCCJSONResult.errorMsg("请输入用户id");
         }
 
         List<UserAddress> userAddressList = addressService.queryAll(userId);
 
         return WUYICCCJSONResult.ok(userAddressList);
+    }
+
+    /**
+     * 后端对收货地址信息进行二次校验的方法
+     *
+     * @param addressBO
+     * @return
+     */
+    private WUYICCCJSONResult checkAddress(AddressBO addressBO) {
+        String receiver = addressBO.getReceiver();
+        if (StringUtils.isBlank(receiver)) {
+            return WUYICCCJSONResult.errorMsg("收货人不能为空");
+        }
+        if (receiver.length() > 12) {
+            return WUYICCCJSONResult.errorMsg("收货人姓名不能太长");
+        }
+        String mobile = addressBO.getMobile();
+
+        if (StringUtils.isBlank(mobile)) {
+            return WUYICCCJSONResult.errorMsg("收货人手机号不能为空");
+        }
+        if (mobile.length() != 11) {
+            return WUYICCCJSONResult.errorMsg("收货人手机号长度不正确");
+        }
+
+        boolean isMobileOk = MobileEmailUtils.checkMobileIsOk(mobile);
+        if (!isMobileOk) {
+            return WUYICCCJSONResult.errorMsg("收货人手机号格式不正确");
+        }
+
+        String province = addressBO.getProvince();
+        String city = addressBO.getCity();
+        String district = addressBO.getDistrict();
+        String detail = addressBO.getDetail();
+        if (
+                StringUtils.isBlank(province)||
+                StringUtils.isBlank(city)||
+                StringUtils.isBlank(district)||
+                StringUtils.isBlank(detail)
+        ) {
+            return WUYICCCJSONResult.errorMsg("收货地址信息不能为空");
+        }
+        return WUYICCCJSONResult.ok();
+    }
+
+    @PostMapping("/add")
+    @ApiOperation(value = "用户新增地址", notes = "用户新增地址", httpMethod = "POST")
+    public WUYICCCJSONResult add(
+            @ApiParam(name = "addressBO", value = "新增地址信息json", required = true)
+            @RequestBody AddressBO addressBO
+    ) {
+
+        WUYICCCJSONResult checkAddressResult = checkAddress(addressBO);//检查收货地址是否符合要求
+        if(checkAddressResult.getStatus() != 200){
+            return checkAddressResult;
+        }
+        addressService.addNewUserAddress(addressBO);
+
+        return WUYICCCJSONResult.ok();
     }
 
 }

@@ -1,6 +1,5 @@
 package com.wuyiccc.controller;
 
-import com.sun.org.apache.regexp.internal.RE;
 import com.wuyiccc.pojo.bo.ShopcartBO;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import io.swagger.annotations.Api;
