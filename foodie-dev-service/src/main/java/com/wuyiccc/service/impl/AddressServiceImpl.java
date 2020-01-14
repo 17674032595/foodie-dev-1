@@ -86,4 +86,17 @@ public class AddressServiceImpl implements AddressService {
         userAddressMapper.updateByPrimaryKeySelective(pendingAddress);//selective 代表 如果有空的字段，那么就不更新，否则就会将未赋值的字段更新为null
 
     }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void deleteUserAddress(String userId, String addressId) {
+
+        UserAddress userAddress = new UserAddress();
+        userAddress.setId(addressId);
+        userAddress.setUserId(userId);
+
+        userAddressMapper.delete(userAddress);
+    }
+
+
 }

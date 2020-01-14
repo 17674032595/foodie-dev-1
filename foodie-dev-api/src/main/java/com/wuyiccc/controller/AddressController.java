@@ -133,4 +133,24 @@ public class AddressController {
 
     }
 
+
+    @ApiOperation(value = "用户删除地址", notes = "用户删除地址", httpMethod = "POST")
+    @PostMapping("/delete")
+    public WUYICCCJSONResult delete(
+            @ApiParam(name = "userId", value = "用户的id", required = true)
+            @RequestParam String userId,
+            @ApiParam(name = "addressId", value = "地址的id", required = true)
+            @RequestParam String addressId
+    ) {
+
+        if (StringUtils.isBlank(userId) || StringUtils.isBlank(addressId)) {
+            return WUYICCCJSONResult.errorMsg("用户id或者地址id不能为空");
+        }
+
+        addressService.deleteUserAddress(userId, addressId);
+
+        return WUYICCCJSONResult.ok();
+    }
+
+
 }

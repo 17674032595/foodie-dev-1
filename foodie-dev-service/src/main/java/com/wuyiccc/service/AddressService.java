@@ -15,6 +15,7 @@ public interface AddressService {
 
     /**
      * 根据用户id查询用户的收货地址列表
+     *
      * @param userId
      * @return
      */
@@ -23,6 +24,7 @@ public interface AddressService {
 
     /**
      * 添加用户收货地址
+     *
      * @param addressBO
      */
     public void addNewUserAddress(AddressBO addressBO);
@@ -30,11 +32,19 @@ public interface AddressService {
 
     /**
      * 更新用户收货地址
+     *
      * @param addressBO
      */
     public void updateUserAddress(AddressBO addressBO);
 
 
+    /**
+     * 根据用户id和用户收货地址id 删除对应的用户收货地址
+     *
+     * @param userId
+     * @param addressId
+     */
+    public void deleteUserAddress(String userId, String addressId);
 
 
 }
