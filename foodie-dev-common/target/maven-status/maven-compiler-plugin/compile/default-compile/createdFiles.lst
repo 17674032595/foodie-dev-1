@@ -1,4 +1,5 @@
 com\wuyiccc\utils\WUYICCCJSONResult.class
+com\wuyiccc\utils\MobileEmailUtils.class
 com\wuyiccc\enums\ItemCommentLevel.class
 com\wuyiccc\utils\PagedGridResult.class
 com\wuyiccc\enums\YesOrNo.class

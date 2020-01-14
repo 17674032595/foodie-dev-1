@@ -1,6 +1,7 @@
 package com.wuyiccc.service;
 
 import com.wuyiccc.pojo.UserAddress;
+import com.wuyiccc.pojo.bo.AddressBO;
 
 import java.util.List;
 
@@ -12,5 +13,28 @@ import java.util.List;
 public interface AddressService {
 
 
+    /**
+     * 根据用户id查询用户的收货地址列表
+     * @param userId
+     * @return
+     */
     public List<UserAddress> queryAll(String userId);
+
+
+    /**
+     * 添加用户收货地址
+     * @param addressBO
+     */
+    public void addNewUserAddress(AddressBO addressBO);
+
+
+    /**
+     * 更新用户收货地址
+     * @param addressBO
+     */
+    public void updateUserAddress(AddressBO addressBO);
+
+
+
+
 }

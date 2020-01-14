@@ -85,10 +85,10 @@ public class AddressController {
         String district = addressBO.getDistrict();
         String detail = addressBO.getDetail();
         if (
-                StringUtils.isBlank(province)||
-                StringUtils.isBlank(city)||
-                StringUtils.isBlank(district)||
-                StringUtils.isBlank(detail)
+                StringUtils.isBlank(province) ||
+                        StringUtils.isBlank(city) ||
+                        StringUtils.isBlank(district) ||
+                        StringUtils.isBlank(detail)
         ) {
             return WUYICCCJSONResult.errorMsg("收货地址信息不能为空");
         }
@@ -103,12 +103,34 @@ public class AddressController {
     ) {
 
         WUYICCCJSONResult checkAddressResult = checkAddress(addressBO);//检查收货地址是否符合要求
-        if(checkAddressResult.getStatus() != 200){
+        if (checkAddressResult.getStatus() != 200) {
             return checkAddressResult;
         }
         addressService.addNewUserAddress(addressBO);
 
         return WUYICCCJSONResult.ok();
+    }
+
+    @PostMapping("/update")
+    @ApiOperation(value = "用户修改收货地址", notes = "用户修改收货地址", httpMethod = "POST")
+    public WUYICCCJSONResult update(
+            @ApiParam(name = "addressBO", value = "更新地址信息json", required = true)
+            @RequestBody AddressBO addressBO
+    ) {
+
+        if (StringUtils.isBlank(addressBO.getAddressId())) {
+            return WUYICCCJSONResult.errorMsg("修改地址错误：addressId不能为空");
+        }
+
+        WUYICCCJSONResult checkAddressResult = checkAddress(addressBO);
+        if (checkAddressResult.getStatus() != 200) {
+            return checkAddressResult;
+        }
+
+        addressService.updateUserAddress(addressBO);
+
+        return WUYICCCJSONResult.ok();
+
     }
 
 }
