@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/OrdersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-common/src/main/java/com/wuyiccc/enums/PayMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/bo/SubmitOrderBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/OrderServiceImpl.java" afterDir="false" />
+    <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="1.填充新订单数据">
+      <change afterPath="$PROJECT_DIR$/foodie-dev-common/src/main/java/com/wuyiccc/enums/OrderStatusEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/AddressService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/OrderServiceImpl.java" afterDir="false" />
     </list>
     <list id="0e577ea8-d3a4-4909-b383-3e2ca3a57756" name="1.实现商品评价的分页功能" comment="">
       <change afterPath="$PROJECT_DIR$/foodie-dev-common/src/main/java/com/wuyiccc/utils/DesensitizationUtil.java" afterDir="false" />
@@ -68,6 +63,30 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/ItemServiceImpl.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="9" end1="9" start2="10" end2="12" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="10" end1="10" start2="13" end2="14" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="62" end1="63" start2="66" end2="67" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="75" end1="76" start2="79" end2="80" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="87" end1="88" start2="91" end2="92" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="113" end1="114" start2="117" end2="117" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="115" end1="116" start2="118" end2="119" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="125" end1="125" start2="128" end2="143" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="128" end1="131" start2="146" end2="149" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="132" end1="135" start2="150" end2="153" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="137" end1="138" start2="155" end2="156" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="141" end1="141" start2="159" end2="163" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="147" end1="149" start2="169" end2="193" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="150" end1="151" start2="194" end2="195" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="152" end1="158" start2="196" end2="199" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="159" end1="159" start2="200" end2="211" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+        <range start1="161" end1="161" start2="213" end2="251" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -278,7 +297,7 @@
       <workItem from="1578222480600" duration="1203000" />
       <workItem from="1578239187906" duration="70000" />
       <workItem from="1578307787619" duration="16336000" />
-      <workItem from="1578612995084" duration="86701000" />
+      <workItem from="1578612995084" duration="98919000" />
     </task>
     <task id="LOCAL-00001" summary="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common">
       <created>1575962871862</created>
@@ -546,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579009432922</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="1.填充新订单数据">
+      <created>1579059154547</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1579059154547</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +603,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1.swagger2文档细节优化" />
     <MESSAGE value="1.前后端跨域的配置" />
     <MESSAGE value="1.实现用户登录验证功能" />
     <MESSAGE value="1.排除springboot自带的日志依赖，整合log4j日志依赖" />
@@ -602,69 +627,70 @@
     <MESSAGE value="1.修改用户收货地址" />
     <MESSAGE value="1.删除用户收货地址" />
     <MESSAGE value="1.修改用户默认收货地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.修改用户默认收货地址" />
+    <MESSAGE value="1.填充新订单数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.填充新订单数据" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="199" key="#Notifications" timestamp="1579001968213">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="199" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1579001968213" />
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1579054198276">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1579078122657">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579054198276" />
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579078122657" />
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577326400260">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577326400260" />
-    <state x="797" y="48" key="CommitChangelistDialog2" timestamp="1579009431019">
+    <state x="797" y="48" key="CommitChangelistDialog2" timestamp="1579069476493">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="797" y="48" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579009431019" />
+    <state x="797" y="48" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579069476493" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1578239259065">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1578239259065" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1579048672160">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1579069458997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579048672160" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1579048672160">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458997" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1579069458997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579048672160" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1579048672160">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458997" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1579069458997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579048672160" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1579048672160">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458997" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1579069458997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579048672160" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1579048507558">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458997" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1579069458998">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579048507558" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1579048507558">
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458998" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1579069458998">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579048507558" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1579048507558">
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458998" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1579069458997">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579048507558" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1579048507558">
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458997" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1579069458998">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579048507558" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579069458998" />
     <state x="553" y="186" key="SettingsEditor" timestamp="1578876850034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -681,10 +707,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="806" y="456" key="VCS.ChangelistChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578884340676" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1579009509169">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1579069481968">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579009509169" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579069481968" />
     <state x="555" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1578612996408">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
