@@ -10,6 +10,7 @@ import com.wuyiccc.service.ItemService;
 import com.wuyiccc.service.OrderService;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +21,7 @@ import java.util.Date;
  * @date 2020/1/15 9:54
  * 岂曰无衣，与子同袍~
  */
+@Service
 public class OrderServiceImpl implements OrderService {
 
 
@@ -46,7 +48,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public void createOrder(SubmitOrderBO submitOrderBO) {
+    public String createOrder(SubmitOrderBO submitOrderBO) {
 
         String userId = submitOrderBO.getUserId();
         String addressId = submitOrderBO.getAddressId();
@@ -133,6 +135,8 @@ public class OrderServiceImpl implements OrderService {
         waitPayOrderStatus.setCreatedTime(new Date());
 
         orderStatusMapper.insert(waitPayOrderStatus);
+
+        return orderId;
 
 
 
