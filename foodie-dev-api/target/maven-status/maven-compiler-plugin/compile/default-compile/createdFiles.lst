@@ -7,4 +7,5 @@ com\wuyiccc\controller\AddressController.class
 com\wuyiccc\controller\ItemsController.class
 com\wuyiccc\config\Swagger2.class
 com\wuyiccc\controller\HelloController.class
+com\wuyiccc\controller\OrdersController.class
 com\wuyiccc\controller\ShopcartController.class
