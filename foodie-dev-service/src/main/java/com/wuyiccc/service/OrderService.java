@@ -1,6 +1,7 @@
 package com.wuyiccc.service;
 
 import com.wuyiccc.pojo.bo.SubmitOrderBO;
+import com.wuyiccc.pojo.vo.OrderVO;
 
 /**
  * @author wuyiccc
@@ -13,5 +14,12 @@ public interface OrderService {
      * 创建订单
      * @param submitOrderBO
      */
-    public String createOrder(SubmitOrderBO submitOrderBO);
+    public OrderVO createOrder(SubmitOrderBO submitOrderBO);
+
+    /**
+     * 修改订单状态
+     * @param orderId
+     * @param orderStatus
+     */
+    public void updateOrderStatus(String orderId,Integer orderStatus);
 }

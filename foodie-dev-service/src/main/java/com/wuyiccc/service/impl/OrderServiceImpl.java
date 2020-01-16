@@ -5,14 +5,18 @@ import com.wuyiccc.enums.YesOrNo;
 import com.wuyiccc.mapper.*;
 import com.wuyiccc.pojo.*;
 import com.wuyiccc.pojo.bo.SubmitOrderBO;
+import com.wuyiccc.pojo.vo.MerchantOrderVO;
+import com.wuyiccc.pojo.vo.OrderVO;
 import com.wuyiccc.service.AddressService;
 import com.wuyiccc.service.ItemService;
 import com.wuyiccc.service.OrderService;
+import org.aspectj.weaver.ast.Or;
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.annotation.Order;
 
 import java.util.Date;
 
@@ -48,7 +52,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
-    public String createOrder(SubmitOrderBO submitOrderBO) {
+    public OrderVO createOrder(SubmitOrderBO submitOrderBO) {
 
         String userId = submitOrderBO.getUserId();
         String addressId = submitOrderBO.getAddressId();
@@ -117,7 +121,7 @@ public class OrderServiceImpl implements OrderService {
             orderItemsMapper.insert(subOrderItem);
 
             // 在用户提交订单之后，规格表中需要扣除库存
-            itemService.decreaseItemSpecStock(itemSpecId,buyCounts);
+            itemService.decreaseItemSpecStock(itemSpecId, buyCounts);
 
         }
 
@@ -136,11 +140,33 @@ public class OrderServiceImpl implements OrderService {
 
         orderStatusMapper.insert(waitPayOrderStatus);
 
-        return orderId;
 
+        //构建商户订单，用于传给支付中心
+        MerchantOrderVO merchantOrderVO = new MerchantOrderVO();
+        merchantOrderVO.setMerchantOrderId(orderId);
+        merchantOrderVO.setMerchantUserId(userId);
+        merchantOrderVO.setAmount(realPayAmount + postAmount);
+        merchantOrderVO.setPayMethod(payMethod);
 
+        //构建自定义订单VO
+        OrderVO orderVO = new OrderVO();
+        orderVO.setOrderId(orderId);
+        orderVO.setMerchantOrderVO(merchantOrderVO);
 
+        return orderVO;
 
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void updateOrderStatus(String orderId, Integer orderStatus) {
+
+        OrderStatus paidStatus = new OrderStatus();
+        paidStatus.setOrderId(orderId);
+        paidStatus.setOrderStatus(orderStatus);
+        paidStatus.setPayTime(new Date());
+
+        orderStatusMapper.updateByPrimaryKeySelective(paidStatus);
     }
 
 }
