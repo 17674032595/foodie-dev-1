@@ -1,5 +1,6 @@
 package com.wuyiccc.service;
 
+import com.wuyiccc.pojo.OrderStatus;
 import com.wuyiccc.pojo.bo.SubmitOrderBO;
 import com.wuyiccc.pojo.vo.OrderVO;
 
@@ -22,4 +23,11 @@ public interface OrderService {
      * @param orderStatus
      */
     public void updateOrderStatus(String orderId,Integer orderStatus);
+
+    /**
+     * 查询订单状态
+     * @param orderId
+     * @return
+     */
+    public OrderStatus queryOrderStatusInfo(String orderId);
 }

@@ -2,6 +2,7 @@ package com.wuyiccc.controller;
 
 import com.wuyiccc.enums.OrderStatusEnum;
 import com.wuyiccc.enums.PayMethod;
+import com.wuyiccc.pojo.OrderStatus;
 import com.wuyiccc.pojo.bo.SubmitOrderBO;
 import com.wuyiccc.pojo.vo.MerchantOrderVO;
 import com.wuyiccc.pojo.vo.OrderVO;
@@ -54,22 +55,23 @@ public class OrdersController extends BaseController {
 
         }
 
-    //    System.out.println(submitOrderBO);
-
-
         // 1.创建订单
         OrderVO orderVO = orderService.createOrder(submitOrderBO);
         String orderId = orderVO.getOrderId();
 
 
         // 2.创建订单以后，移除购物车中已结算(已提交)的商品
-        // TODO 整合redis之后，完善购物车中的已结算商品清楚，并且同步到前端cookie
+        // TODO 整合redis之后，完善购物车中的已结算商品清除，并且同步到前端cookie
         // CookieUtils.setCookie(request,response,FOODIE_SHOPCART,"",true);//重置cookie
 
 
+        // TODO： 向支付中心发送订单被取消，留着把支付中心重做之后再进行coding
+/*
         // 3.向支付中心发送当前订单，用于保存支付中心的订单数据
         MerchantOrderVO merchantOrderVO = orderVO.getMerchantOrderVO();
         merchantOrderVO.setReturnUrl(payReturnUrl); // 将返回url存入商户订单
+        //为了方便测试购买，所以所有的支付金额都统一改为1分钱
+        merchantOrderVO.setAmount(1);
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON); //设置传输的数据类型
@@ -83,7 +85,7 @@ public class OrdersController extends BaseController {
         if(paymentResult.getStatus() != 200){ // 如果不是200，代表创建失败
             return  WUYICCCJSONResult.errorMsg("支付中心订单创建失败，请联系管理员");
         }
-
+*/
 
 
         return WUYICCCJSONResult.ok(orderId);
@@ -91,18 +93,26 @@ public class OrdersController extends BaseController {
 
 
     /**
-     * 被支付中心调用该接口
+     * 被支付中心调用该接口: 更新订单状态为已支付
      *
      * @param merchantOrderId
      * @return
      */
     @PostMapping("/notifyMerchantOrderPaid")
     public Integer notifyMerchantOrderPaid(String merchantOrderId) {
-
         orderService.updateOrderStatus(merchantOrderId, OrderStatusEnum.WAIT_DELIVER.type);
-
-        return HttpStatus.OK.value(); // 返回http状态码 200
+        return HttpStatus.OK.value();
     }
+
+    @PostMapping("getPaidOrderInfo")
+    public WUYICCCJSONResult getPaidOrderInfo(String orderId){
+
+        OrderStatus orderStatus = orderService.queryOrderStatusInfo(orderId);
+
+        return WUYICCCJSONResult.ok(orderStatus);
+    }
+
+
 
 
 }
