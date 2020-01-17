@@ -4,6 +4,7 @@ com\wuyiccc\controller\BaseController.class
 com\wuyiccc\Application.class
 com\wuyiccc\controller\IndexController.class
 com\wuyiccc\controller\StuFooController.class
+com\wuyiccc\controller\center\CenterUserController.class
 com\wuyiccc\controller\AddressController.class
 com\wuyiccc\controller\ItemsController.class
 com\wuyiccc\config\WebMvcConfig.class

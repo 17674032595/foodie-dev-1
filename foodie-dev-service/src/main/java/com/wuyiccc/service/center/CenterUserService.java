@@ -1,6 +1,7 @@
 package com.wuyiccc.service.center;
 
 import com.wuyiccc.pojo.Users;
+import com.wuyiccc.pojo.bo.center.CenterUserBO;
 
 /**
  * @author wuyiccc
@@ -15,4 +16,14 @@ public interface CenterUserService {
      * @return
      */
     public Users queryUserInfo(String userId);
+
+    /**
+     * 更新用户信息
+     * @param userId
+     * @param centerUserBO
+     * @return
+     */
+    public Users updateUserInfo(String userId, CenterUserBO centerUserBO);
+
+
 }
