@@ -88,6 +88,12 @@ public class CenterUserController extends BaseController {
 
                     //获取文件的后缀名称
                     String suffix = fileNameArr[fileNameArr.length - 1];
+                    if(!suffix.equalsIgnoreCase("png")&&
+                            !suffix.equalsIgnoreCase("jpg")&&
+                            !suffix.equalsIgnoreCase("jpeg")
+                    ){
+                        return WUYICCCJSONResult.errorMsg("图片格式不正确!");
+                    }
 
                     // face-{userId}.png
                     //文件名称重组,覆盖式上传
