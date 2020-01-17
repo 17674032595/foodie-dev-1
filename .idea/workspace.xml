@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/resource/FileUpload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/file-upload-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/resources/file-upload-prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/center/CenterUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/center/CenterUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/bo/center/CenterUserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/bo/center/CenterUserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <list id="0e577ea8-d3a4-4909-b383-3e2ca3a57756" name="1.实现商品评价的分页功能" comment="">
       <change afterPath="$PROJECT_DIR$/foodie-dev-common/src/main/java/com/wuyiccc/utils/DesensitizationUtil.java" afterDir="false" />
@@ -64,6 +66,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/BaseController.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="3" end1="3" start2="5" end2="7" changelist="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" />
+        <range start1="15" end1="15" start2="19" end2="35" changelist="0e577ea8-d3a4-4909-b383-3e2ca3a57756" />
+      </ranges>
+    </file>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -101,7 +112,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../foodie-payment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java_dev/java_review_se_base/java_review_se_01" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -273,7 +284,7 @@
       <workItem from="1578222480600" duration="1203000" />
       <workItem from="1578239187906" duration="70000" />
       <workItem from="1578307787619" duration="16336000" />
-      <workItem from="1578612995084" duration="150248000" />
+      <workItem from="1578612995084" duration="160335000" />
     </task>
     <task id="LOCAL-00001" summary="1.构建工程，api,common,mapper,pojo,service 模块&#10;依赖关系：api---&gt;service---&gt;mapper---&gt;pojo---&gt;common">
       <created>1575962871862</created>
@@ -604,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579228911254</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="1.用户中心---使用hibernate 验证用户信息">
+      <created>1579231259153</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1579231259153</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,7 +653,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1.自定义mapper实现懒加载 子分类显示" />
     <MESSAGE value="1.实现首页商品推荐" />
     <MESSAGE value="1.编写商品相关查询service" />
     <MESSAGE value="1.商品详情页的编写(注意后端与前端传递的VO对象的key，要对应，否则会出现数据显示异常的情况)" />
@@ -660,69 +677,70 @@
     <MESSAGE value="1.完成超时逻辑删除订单功能" />
     <MESSAGE value="1.用户中心---查询用户信息" />
     <MESSAGE value="1.用户中心---修改用户信息" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.用户中心---修改用户信息" />
+    <MESSAGE value="1.用户中心---使用hibernate 验证用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.用户中心---使用hibernate 验证用户信息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="199" key="#Notifications" timestamp="1579001968213">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="199" key="#Notifications/0.0.1920.1080@0.0.1920.1080" timestamp="1579001968213" />
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1579227414755">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1579250330523">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579227414755" />
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579250330523" />
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577326400260">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577326400260" />
-    <state x="797" y="48" key="CommitChangelistDialog2" timestamp="1579228908249">
+    <state x="797" y="48" key="CommitChangelistDialog2" timestamp="1579231257252">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="797" y="48" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579228908249" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1579102392122">
+    <state x="797" y="48" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579231257252" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1579247575463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579102392122" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1579230171987">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579247575463" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1579250708131">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579230171987" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1579230171987">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579250708131" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1579250708131">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579230171987" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1579230171987">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579250708131" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1579250708131">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579230171987" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1579230171987">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579250708131" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1579250708131">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579230171987" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1579230069920">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579250708131" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1579250696053">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579230069920" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1579230069920">
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579250696053" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1579250696053">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579230069920" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1579230069920">
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579250696053" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1579250696053">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579230069920" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1579230069920">
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579250696053" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1579250696053">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579230069920" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579250696053" />
     <state x="553" y="186" key="SettingsEditor" timestamp="1578876850034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -739,10 +757,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="806" y="456" key="VCS.ChangelistChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578884340676" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1579228923664">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1579231264053">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579228923664" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579231264053" />
     <state x="555" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1578612996408">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -764,17 +782,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="567" y="245" width="786" height="801" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1578752403176" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1579242794827">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579242794827" />
     <state x="334" y="234" key="new project wizard" timestamp="1578222788062">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="334" y="234" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1578222788062" />
-    <state x="636" y="387" width="716" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1579227948605">
+    <state x="636" y="387" width="716" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1579241697743">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="636" y="387" width="716" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579227948605" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579229468584">
+    <state x="636" y="387" width="716" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1579241697743" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1579246116328">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579229468584" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1579246116328" />
   </component>
 </project>
