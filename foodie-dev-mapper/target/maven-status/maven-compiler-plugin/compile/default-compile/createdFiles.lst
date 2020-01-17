@@ -8,6 +8,7 @@ com\wuyiccc\mapper\UsersMapper.class
 com\wuyiccc\mapper\CategoryMapper.class
 com\wuyiccc\mapper\CategoryMapperCustom.class
 com\wuyiccc\mapper\ItemsImgMapper.class
+com\wuyiccc\mapper\OrdersMapperCustom.class
 com\wuyiccc\mapper\UserAddressMapper.class
 com\wuyiccc\mapper\CarouselMapper.class
 com\wuyiccc\mapper\OrdersMapper.class

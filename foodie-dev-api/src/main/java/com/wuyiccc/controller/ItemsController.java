@@ -97,7 +97,7 @@ public class ItemsController extends BaseController{
             page = 1;   //如果未传入，则默认为第一页
         }
         if(pageSize == null){
-            pageSize = COMMENT_PAGE_SIZE;  // 默认为10
+            pageSize = COMMON_PAGE_SIZE;  // 默认为10
         }
 
         PagedGridResult grid = itemService.queryPagedComments(itemId, level, page, pageSize);
