@@ -1,5 +1,6 @@
 package com.wuyiccc.service.center;
 
+import com.wuyiccc.pojo.Orders;
 import com.wuyiccc.utils.PagedGridResult;
 
 /**
@@ -18,4 +19,19 @@ public interface MyOrdersService {
      * @return
      */
     public PagedGridResult queryMyOrders(String userId,Integer orderStatus,Integer page,Integer pageSize);
+
+
+    /**
+     * 把订单状态变更为商家发货
+     * @param orderId
+     */
+    public void updateDeliverOrderStatus(String orderId);
+
+    /**
+     * 根据用户id和订单id，查询订单
+     * @param userId
+     * @param orderId
+     * @return
+     */
+    public Orders queryMyOrder(String userId,String orderId);
 }

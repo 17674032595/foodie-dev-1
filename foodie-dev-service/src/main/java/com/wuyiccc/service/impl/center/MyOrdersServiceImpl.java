@@ -2,15 +2,30 @@ package com.wuyiccc.service.impl.center;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.wuyiccc.enums.OrderStatusEnum;
+import com.wuyiccc.enums.YesOrNo;
+import com.wuyiccc.mapper.OrderStatusMapper;
+import com.wuyiccc.mapper.OrdersMapper;
 import com.wuyiccc.mapper.OrdersMapperCustom;
+import com.wuyiccc.pojo.OrderStatus;
+import com.wuyiccc.pojo.Orders;
 import com.wuyiccc.pojo.vo.MyOrdersVO;
 import com.wuyiccc.service.center.MyOrdersService;
 import com.wuyiccc.utils.PagedGridResult;
+import com.wuyiccc.utils.WUYICCCJSONResult;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import tk.mybatis.mapper.annotation.Order;
+import tk.mybatis.mapper.entity.Example;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,6 +41,12 @@ public class MyOrdersServiceImpl implements MyOrdersService {
 
     @Autowired
     private OrdersMapperCustom ordersMapperCustom;
+
+    @Autowired
+    private OrderStatusMapper orderStatusMapper;
+
+    @Autowired
+    private OrdersMapper ordersMapper;
 
     //提供通用化的分页方法
     private PagedGridResult setterPagedGrid(List<?> list, Integer page) {
@@ -57,6 +78,36 @@ public class MyOrdersServiceImpl implements MyOrdersService {
 
         List<MyOrdersVO> list = ordersMapperCustom.queryMyOrders(map);
         return setterPagedGrid(list, page);
+    }
+
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void updateDeliverOrderStatus(String orderId) {
+
+        OrderStatus updateOrder = new OrderStatus();
+        updateOrder.setOrderStatus(OrderStatusEnum.WAIT_RECEIVE.type);
+        updateOrder.setDeliverTime(new Date());
+
+        Example example = new Example(OrderStatus.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("orderId",orderId);
+        criteria.andEqualTo("orderStatus",OrderStatusEnum.WAIT_DELIVER.type);
+
+        orderStatusMapper.updateByExampleSelective(updateOrder,example);
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public Orders queryMyOrder(String userId, String orderId) {
+
+        Orders order = new Orders();
+        order.setUserId(userId);
+        order.setId(orderId);
+
+        order.setIsDelete(YesOrNo.NO.type);
+
+        return ordersMapper.selectOne(order);
     }
 
 
