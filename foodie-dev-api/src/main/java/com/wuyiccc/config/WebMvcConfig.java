@@ -21,7 +21,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")//映射所有资源
-                .addResourceLocations("file:/code_learn/java_structure_mooc_bus/images/")//映射本地静态资源
+                .addResourceLocations("file:/code_learn/java_structure_mooc_bus/data/")//映射本地静态资源
                 .addResourceLocations("classpath:/META-INF/resources/"); //swagger2 的生成的html的地址
 
 

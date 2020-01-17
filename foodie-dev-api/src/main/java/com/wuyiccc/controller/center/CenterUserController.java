@@ -7,6 +7,7 @@ import com.wuyiccc.resource.FileUpload;
 import com.wuyiccc.service.UserService;
 import com.wuyiccc.service.center.CenterUserService;
 import com.wuyiccc.utils.CookieUtils;
+import com.wuyiccc.utils.DateUtil;
 import com.wuyiccc.utils.JsonUtils;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import io.swagger.annotations.Api;
@@ -16,6 +17,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
@@ -94,6 +96,10 @@ public class CenterUserController extends BaseController {
                     //上传的头像最终保存的位置
                     String finalFacePath = fileSpace + uploadPathPrefix + File.separator + newFileName;
 
+
+                    //用于提供给web服务访问的地址
+                    uploadPathPrefix += ("/" + newFileName);
+
                     File outFile = new File(finalFacePath);
                     if (outFile.getParentFile() != null) { //如果有父目录，那么级联创建没有的父目录
                         //创建文件夹
@@ -132,6 +138,24 @@ public class CenterUserController extends BaseController {
 
             }
         }
+
+
+        //获得图片服务地址
+        String imageServerUrl = fileUpload.getImageServerUrl();
+
+
+        // 由于浏览器可能存在缓存的情况，所以我们需要加上时间戳，来保证更新后的图片能够及时刷新
+        String finalUserFaceUrl = imageServerUrl + uploadPathPrefix + "?t=" + DateUtil.getCurrentDateString(DateUtil.DATE_PATTERN);
+
+
+        Users userResult = centerUserService.updateUserFace(userId, finalUserFaceUrl) ;
+
+        //对前端信息进行覆盖
+        userResult = setNullProperty(userResult);
+        CookieUtils.setCookie(request, response, "user", JsonUtils.objectToJson(userResult), true);
+
+
+        //TODO: 后续要改，增加令牌token，会整合redis，分布式会话
         return WUYICCCJSONResult.ok();
     }
 
