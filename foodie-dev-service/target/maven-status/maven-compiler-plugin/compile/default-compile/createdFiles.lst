@@ -1,3 +1,4 @@
+com\wuyiccc\service\center\CenterUserService.class
 com\wuyiccc\service\impl\CategoryServiceImpl.class
 com\wuyiccc\service\impl\StuServiceImpl.class
 com\wuyiccc\service\UserService.class
@@ -5,6 +6,7 @@ com\wuyiccc\service\OrderService.class
 com\wuyiccc\service\CategoryService.class
 com\wuyiccc\service\impl\ItemServiceImpl.class
 com\wuyiccc\service\ItemService.class
+com\wuyiccc\service\impl\center\CenterUserServiceImpl.class
 com\wuyiccc\service\AddressService.class
 com\wuyiccc\service\CarouselService.class
 com\wuyiccc\service\impl\OrderServiceImpl.class
