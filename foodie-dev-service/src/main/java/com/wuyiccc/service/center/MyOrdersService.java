@@ -1,6 +1,7 @@
 package com.wuyiccc.service.center;
 
 import com.wuyiccc.pojo.Orders;
+import com.wuyiccc.pojo.vo.OrderStatusCountsVO;
 import com.wuyiccc.utils.PagedGridResult;
 
 /**
@@ -54,4 +55,11 @@ public interface MyOrdersService {
      * @return
      */
     public boolean deleteOrder(String userId, String orderId);
+
+    /**
+     * 查询用户订单概览
+     * @param userId
+     */
+    public OrderStatusCountsVO getOrderStatusCounts(String userId);
+
 }

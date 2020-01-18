@@ -10,6 +10,7 @@ import com.wuyiccc.mapper.OrdersMapperCustom;
 import com.wuyiccc.pojo.OrderStatus;
 import com.wuyiccc.pojo.Orders;
 import com.wuyiccc.pojo.vo.MyOrdersVO;
+import com.wuyiccc.pojo.vo.OrderStatusCountsVO;
 import com.wuyiccc.service.center.MyOrdersService;
 import com.wuyiccc.utils.PagedGridResult;
 import com.wuyiccc.utils.WUYICCCJSONResult;
@@ -148,4 +149,34 @@ public class MyOrdersServiceImpl implements MyOrdersService {
         return result == 1 ? true : false; //result == 1 代表更新成功
 
     }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public  OrderStatusCountsVO getOrderStatusCounts(String userId) {
+
+        //四次调用mapper
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("userId", userId);
+        map.put("orderStatus", OrderStatusEnum.WAIT_PAY.type);
+        int waitPayCounts = ordersMapperCustom.getMyOrderStatusCounts(map);
+
+        map.put("orderStatus", OrderStatusEnum.WAIT_DELIVER.type);
+        int waitDeliverCounts = ordersMapperCustom.getMyOrderStatusCounts(map);
+
+        map.put("orderStatus", OrderStatusEnum.WAIT_RECEIVE.type);
+        int waitReceiveCounts = ordersMapperCustom.getMyOrderStatusCounts(map);
+
+        map.put("orderStatus", OrderStatusEnum.SUCCESS.type);
+        map.put("isComment", YesOrNo.NO.type);
+        int waitCommentsCounts = ordersMapperCustom.getMyOrderStatusCounts(map);
+
+
+        OrderStatusCountsVO countsVO = new OrderStatusCountsVO(waitPayCounts,waitDeliverCounts,waitReceiveCounts,waitCommentsCounts);
+
+        return countsVO;
+
+    }
+
+
 }

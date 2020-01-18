@@ -1,6 +1,7 @@
 package com.wuyiccc.controller.center;
 
 import com.wuyiccc.controller.BaseController;
+import com.wuyiccc.pojo.vo.OrderStatusCountsVO;
 import com.wuyiccc.service.center.MyOrdersService;
 import com.wuyiccc.utils.PagedGridResult;
 import com.wuyiccc.utils.WUYICCCJSONResult;
@@ -24,6 +25,26 @@ public class MyOrdersController extends BaseController {
 
     @Autowired
     private MyOrdersService myOrdersService;
+
+
+
+    @ApiOperation(value = "获得订单状态数概况", notes = "获得订单数概况", httpMethod = "POST")
+    @PostMapping("/statusCounts")
+    public WUYICCCJSONResult statusCounts(
+            @ApiParam(name = "userId", value = "用户id", required = true)
+            @RequestParam String userId
+    ) {
+
+        if (StringUtils.isBlank(userId)) {
+            return WUYICCCJSONResult.errorMsg("用户id不能为空");
+        }
+
+        OrderStatusCountsVO countsVO = myOrdersService.getOrderStatusCounts(userId);
+
+        return WUYICCCJSONResult.ok(countsVO);
+
+
+    }
 
     @ApiOperation(value = "查询订单列表", notes = "查询订单列表", httpMethod = "POST")
     @PostMapping("/query")

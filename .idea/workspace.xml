@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf5de94d-09b6-47e5-ac52-9137cb93d3d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/ItemsCommentsMapperCustom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/ItemsCommentsMapperCustom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/bo/center/OrderItemsCommentBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/vo/MyCommentVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/center/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-dev-pojo/src/main/java/com/wuyiccc/pojo/vo/OrderStatusCountsVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/center/MyCommentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/center/MyCommentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/center/MyCommentsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/center/MyCommentsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/center/MyCommentsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/center/MyCommentsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/center/MyOrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-api/src/main/java/com/wuyiccc/controller/center/MyOrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/OrdersMapperCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/java/com/wuyiccc/mapper/OrdersMapperCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/OrdersMapperCustom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-mapper/src/main/resources/mapper/OrdersMapperCustom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/center/MyOrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/center/MyOrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/center/MyOrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/src/main/java/com/wuyiccc/service/impl/center/MyOrdersServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-dev-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <list id="0e577ea8-d3a4-4909-b383-3e2ca3a57756" name="1.实现商品评价的分页功能" comment="">
@@ -288,14 +284,7 @@
       <workItem from="1578222480600" duration="1203000" />
       <workItem from="1578239187906" duration="70000" />
       <workItem from="1578307787619" duration="16336000" />
-      <workItem from="1578612995084" duration="197287000" />
-    </task>
-    <task id="LOCAL-00008" summary="1.判断用户注册时，用户名是否存在的逻辑判断(service层+controller层的编写)">
-      <created>1577097720873</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1577097720873</updated>
+      <workItem from="1578612995084" duration="199742000" />
     </task>
     <task id="LOCAL-00009" summary="1.自定义响应类型数据结构，并修改PasswordController类的方法">
       <created>1577100477921</created>
@@ -633,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579316106942</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="1.用户查询历史评价表">
+      <created>1579333129747</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1579333129747</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +660,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1.重新渲染刷新购物车" />
     <MESSAGE value="1.删除购物车商品空接口的编写" />
     <MESSAGE value="1.查询用户的收货地址功能的编写" />
     <MESSAGE value="1.新增用户收货地址" />
@@ -689,7 +684,8 @@
     <MESSAGE value="1.用户确认收货与删除订单前的验证" />
     <MESSAGE value="1.用户确认收货与删除订单前功能的编写" />
     <MESSAGE value="1.查询待评价的商品列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.查询待评价的商品列表" />
+    <MESSAGE value="1.用户查询历史评价表" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.用户查询历史评价表" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="199" key="#Notifications" timestamp="1579001968213">
@@ -700,62 +696,62 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="657" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579266820840" />
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1579332154549">
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1579334940297">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579332154549" />
+    <state x="765" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1579334940297" />
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577326400260">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="690" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1577326400260" />
-    <state x="797" y="48" key="CommitChangelistDialog2" timestamp="1579316104059">
+    <state x="797" y="48" key="CommitChangelistDialog2" timestamp="1579333125414">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="797" y="48" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579316104059" />
+    <state x="797" y="48" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1579333125414" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1579247575463">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1579247575463" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1579332603529">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1579335497694">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579332603529" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1579332603529">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579335497694" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1579335497694">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579332603529" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1579332603529">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579335497694" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1579335497694">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540608" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579332603529" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1579332603529">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579335497694" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1579335497694">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540609" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579332603529" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1579332578613">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579335497694" />
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom" timestamp="1579335412734">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.bottom/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579332578613" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1579332578612">
+    <state width="1877" height="275" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1579335412734" />
+    <state width="1877" height="275" key="GridCell.Tab.1.center" timestamp="1579335412734">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.center/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579332578612" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1579332578612">
+    <state width="1877" height="275" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1579335412734" />
+    <state width="1877" height="275" key="GridCell.Tab.1.left" timestamp="1579335412734">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.left/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579332578612" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1579332578612">
+    <state width="1877" height="275" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1579335412734" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right" timestamp="1579335412734">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1533" height="295" key="GridCell.Tab.1.right/0.0.1576.966@0.0.1576.966" timestamp="1576240540580" />
-    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579332578612" />
+    <state width="1877" height="275" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1579335412734" />
     <state x="553" y="186" key="SettingsEditor" timestamp="1578876850034">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -772,10 +768,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="806" y="456" key="VCS.ChangelistChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1578884340676" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1579316120354">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1579333161745">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579316120354" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1579333161745" />
     <state x="555" y="327" key="com.intellij.ide.util.TipDialog" timestamp="1578612996408">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
