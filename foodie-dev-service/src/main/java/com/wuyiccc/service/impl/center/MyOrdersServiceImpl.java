@@ -1,7 +1,6 @@
 package com.wuyiccc.service.impl.center;
 
 import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import com.wuyiccc.enums.OrderStatusEnum;
 import com.wuyiccc.enums.YesOrNo;
 import com.wuyiccc.mapper.OrderStatusMapper;
@@ -13,17 +12,10 @@ import com.wuyiccc.pojo.vo.MyOrdersVO;
 import com.wuyiccc.pojo.vo.OrderStatusCountsVO;
 import com.wuyiccc.service.center.MyOrdersService;
 import com.wuyiccc.utils.PagedGridResult;
-import com.wuyiccc.utils.WUYICCCJSONResult;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import tk.mybatis.mapper.annotation.Order;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
@@ -37,7 +29,7 @@ import java.util.Map;
  * 岂曰无衣，与子同袍~
  */
 @Service
-public class MyOrdersServiceImpl implements MyOrdersService {
+public class MyOrdersServiceImpl extends BaseService implements MyOrdersService {
 
 
     @Autowired
@@ -49,20 +41,6 @@ public class MyOrdersServiceImpl implements MyOrdersService {
     @Autowired
     private OrdersMapper ordersMapper;
 
-    //提供通用化的分页方法
-    private PagedGridResult setterPagedGrid(List<?> list, Integer page) {
-
-        PageInfo<?> pageList = new PageInfo<>(list);  // 将分页之后的数据交给com.github.pagehelper.PageInfo对象，用来获取当前页的信息
-
-        // 为了和前端的数据名称对应，我们这里需要更改数据对应的key，进行如下变化
-        PagedGridResult grid = new PagedGridResult();
-        grid.setPage(page);   // 将当前页index 交给grid对象
-        grid.setRows(list);   // 将数据信息交给grid 对象
-        grid.setTotal(pageList.getPages());  // 通过PageInfo 来获取页面的总页数，交给grid
-        grid.setRecords(pageList.getTotal());  // 通过PageInfo 来获取当前页面的总记录条数，交给grid
-        return grid;
-
-    }
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
@@ -152,7 +130,7 @@ public class MyOrdersServiceImpl implements MyOrdersService {
 
     @Transactional(propagation = Propagation.SUPPORTS)
     @Override
-    public  OrderStatusCountsVO getOrderStatusCounts(String userId) {
+    public OrderStatusCountsVO getOrderStatusCounts(String userId) {
 
         //四次调用mapper
 
@@ -172,10 +150,24 @@ public class MyOrdersServiceImpl implements MyOrdersService {
         int waitCommentsCounts = ordersMapperCustom.getMyOrderStatusCounts(map);
 
 
-        OrderStatusCountsVO countsVO = new OrderStatusCountsVO(waitPayCounts,waitDeliverCounts,waitReceiveCounts,waitCommentsCounts);
+        OrderStatusCountsVO countsVO = new OrderStatusCountsVO(waitPayCounts, waitDeliverCounts, waitReceiveCounts, waitCommentsCounts);
 
         return countsVO;
 
+    }
+
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public PagedGridResult getOrdersTrend(String userId, Integer page, Integer pageSize) {
+
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("userId", userId);
+        PageHelper.startPage(page, pageSize);
+
+        List<OrderStatus> list = ordersMapperCustom.getMyOrderTrend(map);
+        PagedGridResult grid = setterPagedGrid(list, page);
+        return grid;
     }
 
 

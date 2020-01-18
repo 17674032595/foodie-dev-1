@@ -27,7 +27,6 @@ public class MyOrdersController extends BaseController {
     private MyOrdersService myOrdersService;
 
 
-
     @ApiOperation(value = "获得订单状态数概况", notes = "获得订单数概况", httpMethod = "POST")
     @PostMapping("/statusCounts")
     public WUYICCCJSONResult statusCounts(
@@ -104,14 +103,14 @@ public class MyOrdersController extends BaseController {
 
         WUYICCCJSONResult result = checkUserOrder(userId, orderId);
 
-        if(result.getStatus() != HttpStatus.OK.value()){
+        if (result.getStatus() != HttpStatus.OK.value()) {
             return result;
         }
 
 
         boolean res = myOrdersService.updateReceiveOrderStatus(orderId);
 
-        if(!res){
+        if (!res) {
             return WUYICCCJSONResult.errorMsg("订单确认收货失败");
         }
 
@@ -132,13 +131,13 @@ public class MyOrdersController extends BaseController {
 
         WUYICCCJSONResult result = checkUserOrder(userId, orderId);
 
-        if(result.getStatus() != HttpStatus.OK.value()){
+        if (result.getStatus() != HttpStatus.OK.value()) {
             return result;
         }
 
         boolean res = myOrdersService.deleteOrder(userId, orderId);
 
-        if(!res){
+        if (!res) {
             return WUYICCCJSONResult.errorMsg("订单删除失败");
         }
 
@@ -146,6 +145,32 @@ public class MyOrdersController extends BaseController {
     }
 
 
+    @ApiOperation(value = "查询订单动向", notes = "查询订单动向", httpMethod = "POST")
+    @PostMapping("/trend")
+    public WUYICCCJSONResult trend(
+            @ApiParam(name = "userId", value = "用户id", required = true)
+            @RequestParam String userId,
+            @ApiParam(name = "page", value = "查询下一页的第几页", required = false)
+            @RequestParam Integer page,
+            @ApiParam(name = "pageSize", value = "分页的每一页显示的条数", required = false)
+            @RequestParam Integer pageSize
+    ) {
+
+        if (StringUtils.isBlank(userId)) {
+            return WUYICCCJSONResult.errorMsg("用户id不能为空");
+        }
+        if (page == null) {
+            page = 1;
+        }
+
+        if (pageSize == null) {
+            pageSize = COMMON_PAGE_SIZE;
+        }
+
+        PagedGridResult grid = myOrdersService.getOrdersTrend(userId, page, pageSize);
+
+        return WUYICCCJSONResult.ok(grid);
+    }
 
 
 }
