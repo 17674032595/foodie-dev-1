@@ -1,4 +1,6 @@
+com\wuyiccc\service\impl\center\MyCommentsServiceImpl.class
 com\wuyiccc\service\center\CenterUserService.class
+com\wuyiccc\service\center\MyCommentsService.class
 com\wuyiccc\service\impl\CategoryServiceImpl.class
 com\wuyiccc\service\impl\StuServiceImpl.class
 com\wuyiccc\service\UserService.class

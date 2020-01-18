@@ -8,6 +8,7 @@ com\wuyiccc\controller\AddressController.class
 com\wuyiccc\controller\ItemsController.class
 META-INF\spring-configuration-metadata.json
 com\wuyiccc\config\Swagger2.class
+com\wuyiccc\controller\center\MyCommentsController.class
 com\wuyiccc\controller\center\MyOrdersController.class
 com\wuyiccc\controller\OrdersController.class
 com\wuyiccc\controller\ShopcartController.class

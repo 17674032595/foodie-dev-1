@@ -1,9 +1,6 @@
 package com.wuyiccc.controller.center;
 
 import com.wuyiccc.controller.BaseController;
-import com.wuyiccc.mapper.OrderStatusMapper;
-import com.wuyiccc.pojo.OrderStatus;
-import com.wuyiccc.pojo.Orders;
 import com.wuyiccc.service.center.MyOrdersService;
 import com.wuyiccc.utils.PagedGridResult;
 import com.wuyiccc.utils.WUYICCCJSONResult;
@@ -127,20 +124,7 @@ public class MyOrdersController extends BaseController {
         return WUYICCCJSONResult.ok();
     }
 
-    /**
-     * 用于验证用户和订单是否有关系，避免非法用户调用
-     *
-     * @return
-     */
-    private WUYICCCJSONResult checkUserOrder(String userId, String orderId) {
 
-        Orders order = myOrdersService.queryMyOrder(userId, orderId);
-
-        if (order == null) {
-            return WUYICCCJSONResult.errorMsg("订单不存在");
-        }
-        return WUYICCCJSONResult.ok();
-    }
 
 
 }
