@@ -4,17 +4,17 @@ import com.wuyiccc.controller.BaseController;
 import com.wuyiccc.enums.YesOrNo;
 import com.wuyiccc.pojo.OrderItems;
 import com.wuyiccc.pojo.Orders;
+import com.wuyiccc.pojo.bo.center.OrderItemsCommentBO;
 import com.wuyiccc.service.center.MyCommentsService;
+import com.wuyiccc.utils.PagedGridResult;
 import com.wuyiccc.utils.WUYICCCJSONResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -57,6 +57,66 @@ public class MyCommentsController extends BaseController {
 
         return WUYICCCJSONResult.ok(list);
     }
+
+
+    @ApiOperation(value = "保存评论列表", notes = "保存评论列表", httpMethod = "POST")
+    @PostMapping("/saveList")
+    public WUYICCCJSONResult saveList(
+            @ApiParam(name = "userId", value = "用户id", required = true)
+            @RequestParam String userId,
+            @ApiParam(name = "orderId", value = "订单id", required = true)
+            @RequestParam String orderId,
+            @RequestBody List<OrderItemsCommentBO> commentList
+    ) {
+
+        System.out.println(commentList);
+
+        WUYICCCJSONResult checkResult = checkUserOrder(userId, orderId);
+
+        if (checkResult.getStatus() != HttpStatus.OK.value()) {
+            return checkResult;
+        }
+
+        // 判断评论内容不能为空
+        if(commentList == null || commentList.isEmpty() || commentList.size() == 0){
+            return WUYICCCJSONResult.errorMsg("评价内容不能为空");
+        }
+
+        myCommentsService.saveComments(orderId,userId,commentList);
+
+        return WUYICCCJSONResult.ok();
+    }
+
+    @ApiOperation(value = "查询我的评价", notes = "查询我的评价", httpMethod = "POST")
+    @PostMapping("/query")
+    public WUYICCCJSONResult query(
+            @ApiParam(name = "userId", value = "用户id", required = true)
+            @RequestParam String userId,
+            @ApiParam(name = "page", value = "查询下一页的第几页", required = false)
+            @RequestParam Integer page,
+            @ApiParam(name = "pageSize", value = "分页的每一页显示的条数", required = false)
+            @RequestParam Integer pageSize
+    ) {
+
+        if (StringUtils.isBlank(userId)) {
+            return WUYICCCJSONResult.errorMsg("用户id不能为空");
+        }
+        if (page == null) {
+            page = 1;
+        }
+
+        if (pageSize == null) {
+            pageSize = COMMON_PAGE_SIZE;
+        }
+
+        PagedGridResult grid = myCommentsService.queryMyComments(userId,  page, pageSize);
+
+        return WUYICCCJSONResult.ok(grid);
+    }
+
+
+
+
 
 
 }

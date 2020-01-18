@@ -14,6 +14,7 @@ com\wuyiccc\service\AddressService.class
 com\wuyiccc\service\CarouselService.class
 com\wuyiccc\service\impl\OrderServiceImpl.class
 com\wuyiccc\service\impl\AddressServiceImpl.class
+com\wuyiccc\service\impl\center\BaseService.class
 com\wuyiccc\service\impl\UserServiceImpl.class
 com\wuyiccc\service\StuService.class
 com\wuyiccc\service\impl\CarouselServiceImpl.class

@@ -1,6 +1,8 @@
 package com.wuyiccc.service.center;
 
 import com.wuyiccc.pojo.OrderItems;
+import com.wuyiccc.pojo.bo.center.OrderItemsCommentBO;
+import com.wuyiccc.utils.PagedGridResult;
 
 import java.util.List;
 
@@ -17,4 +19,24 @@ public interface MyCommentsService {
      * @return
      */
     public List<OrderItems> queryPendingComment(String orderId);
+
+    /**
+     * 保存用户对商品的评价
+     * @param orderId
+     * @param userId
+     * @param commentList
+     */
+    public void saveComments(String orderId, String userId, List<OrderItemsCommentBO> commentList);
+
+
+    /**
+     * 我的评价查询分页
+     * @param userId
+     * @param page
+     * @param pageSize
+     * @return
+     */
+    public PagedGridResult queryMyComments(String userId,Integer page,Integer pageSize);
+
+
 }
