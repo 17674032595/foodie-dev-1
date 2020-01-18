@@ -74,7 +74,7 @@ public class MyOrdersServiceImpl implements MyOrdersService {
             map.put("orderStatus", orderStatus);
         }
 
-        PageHelper.startPage(page,pageSize);
+        PageHelper.startPage(page, pageSize);
 
         List<MyOrdersVO> list = ordersMapperCustom.queryMyOrders(map);
         return setterPagedGrid(list, page);
@@ -91,10 +91,10 @@ public class MyOrdersServiceImpl implements MyOrdersService {
 
         Example example = new Example(OrderStatus.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("orderId",orderId);
-        criteria.andEqualTo("orderStatus",OrderStatusEnum.WAIT_DELIVER.type);
+        criteria.andEqualTo("orderId", orderId);
+        criteria.andEqualTo("orderStatus", OrderStatusEnum.WAIT_DELIVER.type);
 
-        orderStatusMapper.updateByExampleSelective(updateOrder,example);
+        orderStatusMapper.updateByExampleSelective(updateOrder, example);
     }
 
     @Transactional(propagation = Propagation.SUPPORTS)
@@ -110,5 +110,42 @@ public class MyOrdersServiceImpl implements MyOrdersService {
         return ordersMapper.selectOne(order);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public boolean updateReceiveOrderStatus(String orderId) {
 
+        OrderStatus updateOrder = new OrderStatus();
+        updateOrder.setOrderStatus(OrderStatusEnum.SUCCESS.type);
+        updateOrder.setSuccessTime(new Date());
+
+        Example example = new Example(OrderStatus.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("orderId", orderId);
+        criteria.andEqualTo("orderStatus", OrderStatusEnum.WAIT_RECEIVE.type);
+
+        int result = orderStatusMapper.updateByExampleSelective(updateOrder, example);
+
+        return result == 1 ? true : false; //result == 1 代表更新成功
+
+
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public boolean deleteOrder(String userId, String orderId) {
+
+        Orders deleteOrder = new Orders();
+        deleteOrder.setIsDelete(YesOrNo.YES.type);
+        deleteOrder.setUpdatedTime(new Date());
+
+        Example example = new Example(Orders.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("id", orderId);
+        criteria.andEqualTo("userId", userId);
+
+        int result = ordersMapper.updateByExampleSelective(deleteOrder, example);
+
+        return result == 1 ? true : false; //result == 1 代表更新成功
+
+    }
 }

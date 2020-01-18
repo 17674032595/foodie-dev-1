@@ -1,6 +1,8 @@
 package com.wuyiccc.controller.center;
 
 import com.wuyiccc.controller.BaseController;
+import com.wuyiccc.mapper.OrderStatusMapper;
+import com.wuyiccc.pojo.OrderStatus;
 import com.wuyiccc.pojo.Orders;
 import com.wuyiccc.service.center.MyOrdersService;
 import com.wuyiccc.utils.PagedGridResult;
@@ -87,6 +89,15 @@ public class MyOrdersController extends BaseController {
         if(result.getStatus() != HttpStatus.OK.value()){
             return result;
         }
+
+
+        boolean res = myOrdersService.updateReceiveOrderStatus(orderId);
+
+        if(!res){
+            return WUYICCCJSONResult.errorMsg("订单确认收货失败");
+        }
+
+
         return WUYICCCJSONResult.ok();
     }
 
@@ -106,6 +117,13 @@ public class MyOrdersController extends BaseController {
         if(result.getStatus() != HttpStatus.OK.value()){
             return result;
         }
+
+        boolean res = myOrdersService.deleteOrder(userId, orderId);
+
+        if(!res){
+            return WUYICCCJSONResult.errorMsg("订单删除失败");
+        }
+
         return WUYICCCJSONResult.ok();
     }
 
